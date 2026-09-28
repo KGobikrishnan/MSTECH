@@ -7,16 +7,16 @@ import { motion } from "framer-motion";
 export function FadeUp({
   children,
   delay = 0,
-  duration = 0.45,
-  y = 20,
+  duration = 0.5,
+  y = 30,
   className = ""
 }) {
   return (
     <motion.div
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1, margin: "0px 0px -20px 0px" }}
-      transition={{ duration, delay, ease: [0.25, 0.1, 0.25, 1.0] }}
+      viewport={{ once: true, amount: 0.2, margin: "0px 0px -40px 0px" }}
+      transition={{ duration, delay, ease: [0.22, 1, 0.36, 1] }}
       className={className}
     >
       {children}
@@ -30,14 +30,14 @@ export function FadeUp({
 export function FadeIn({
   children,
   delay = 0,
-  duration = 0.45,
+  duration = 0.5,
   className = ""
 }) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: true, amount: 0.1, margin: "0px 0px -20px 0px" }}
+      viewport={{ once: true, amount: 0.2, margin: "0px 0px -40px 0px" }}
       transition={{ duration, delay, ease: "easeOut" }}
       className={className}
     >
@@ -52,15 +52,15 @@ export function FadeIn({
 export function ScaleIn({
   children,
   delay = 0,
-  duration = 0.45,
+  duration = 0.5,
   className = ""
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
+      initial={{ opacity: 0, scale: 0.93 }}
       whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true, amount: 0.1, margin: "0px 0px -20px 0px" }}
-      transition={{ duration, delay, ease: [0.25, 0.1, 0.25, 1.0] }}
+      viewport={{ once: true, amount: 0.2, margin: "0px 0px -40px 0px" }}
+      transition={{ duration, delay, ease: [0.22, 1, 0.36, 1] }}
       className={className}
     >
       {children}
@@ -69,48 +69,34 @@ export function ScaleIn({
 }
 
 /**
- * Stagger container for child elements
+ * Stagger container for child elements - acts as a pass-through wrapper
  */
 export function StaggerContainer({
   children,
-  staggerDelay = 0.08,
   className = ""
 }) {
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.1, margin: "0px 0px -20px 0px" }}
-      variants={{
-        hidden: {},
-        show: {
-          transition: {
-            staggerChildren: staggerDelay
-          }
-        }
-      }}
-      className={className}
-    >
+    <div className={className}>
       {children}
-    </motion.div>
+    </div>
   );
 }
 
+/**
+ * StaggerItem triggers INDIVIDUALLY when EACH card enters the viewport while scrolling
+ */
 export function StaggerItem({
   children,
-  y = 15,
+  y = 30,
+  delay = 0,
   className = ""
 }) {
   return (
     <motion.div
-      variants={{
-        hidden: { opacity: 0, y },
-        show: {
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1.0] }
-        }
-      }}
+      initial={{ opacity: 0, y }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15, margin: "0px 0px -30px 0px" }}
+      transition={{ duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] }}
       className={className}
     >
       {children}
