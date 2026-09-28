@@ -60,45 +60,45 @@ export default function ProcessSteps() {
           </p>
         </FadeUp>
 
-        {/* 4-Step Process Grid with Staggered Scroll Animation */}
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative" staggerDelay={0.12}>
+        {/* 4-Step Process Grid: 2-Column Grid on Mobile */}
+        <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 relative" staggerDelay={0.1}>
           {STEPS.map((item, idx) => {
             const Icon = item.icon;
             return (
               <StaggerItem key={idx}>
-                <div className="h-full group relative rounded-2xl p-6 bg-slate-50 hover:bg-white border border-slate-200/90 hover:border-[#0875D1]/40 transition-all duration-300 hover:shadow-xl hover:shadow-[#0875D1]/10 flex flex-col justify-between">
+                <div className="h-full group relative rounded-2xl p-3.5 sm:p-6 bg-slate-50 hover:bg-white border border-slate-200/90 hover:border-[#0875D1]/40 transition-all duration-300 hover:shadow-xl hover:shadow-[#0875D1]/10 flex flex-col justify-between">
                   {/* Step number badge */}
                   <div>
-                    <div className="flex items-center justify-between mb-5">
-                      <span className="text-3xl font-black text-slate-300 group-hover:text-[#0875D1] transition-colors font-mono">
+                    <div className="flex items-center justify-between mb-3 sm:mb-5">
+                      <span className="text-xl sm:text-3xl font-black text-slate-300 group-hover:text-[#0875D1] transition-colors font-mono">
                         {item.step}
                       </span>
-                      <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-[#EAF6FF] text-[#0875D1] border border-[#0875D1]/20">
+                      <span className="text-[9px] sm:text-[11px] font-bold px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-[#EAF6FF] text-[#0875D1] border border-[#0875D1]/20">
                         {item.highlight}
                       </span>
                     </div>
 
                     {/* Icon */}
-                    <div className="w-12 h-12 rounded-xl bg-[#EAF6FF] border border-[#0875D1]/20 text-[#0875D1] flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-[#0875D1] group-hover:text-white transition-all shadow-xs">
-                      <Icon className="w-6 h-6" />
+                    <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-[#EAF6FF] border border-[#0875D1]/20 text-[#0875D1] flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 group-hover:bg-[#0875D1] group-hover:text-white transition-all shadow-xs">
+                      <Icon className="w-4 h-4 sm:w-6 sm:h-6" />
                     </div>
 
                     {/* Content */}
-                    <h3 className="text-lg font-bold text-[#042B55] group-hover:text-[#0875D1] transition-colors">
+                    <h3 className="text-sm sm:text-lg font-bold text-[#042B55] group-hover:text-[#0875D1] transition-colors leading-snug">
                       {item.title}
                     </h3>
-                    <span className="text-xs text-[#0875D1] font-tamil font-semibold block mt-0.5 mb-2.5">
+                    <span className="text-[10px] sm:text-xs text-[#0875D1] font-tamil font-semibold block mt-0.5 mb-1.5 sm:mb-2.5">
                       {item.subtitle}
                     </span>
-                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    <p className="text-[11px] sm:text-sm text-slate-600 leading-relaxed line-clamp-3 sm:line-clamp-none">
                       {item.desc}
                     </p>
                   </div>
 
                   {/* Bottom line accent */}
-                  <div className="mt-5 pt-4 border-t border-slate-200 flex items-center text-xs font-semibold text-slate-500 group-hover:text-[#0875D1] transition-colors">
-                    <span>Guaranteed Standards</span>
-                    <ShieldCheck className="w-4 h-4 ml-auto text-[#10B981]" />
+                  <div className="mt-3 sm:mt-5 pt-2.5 sm:pt-4 border-t border-slate-200 flex items-center text-[10px] sm:text-xs font-semibold text-slate-500 group-hover:text-[#0875D1] transition-colors">
+                    <span className="truncate">Standard</span>
+                    <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 ml-auto text-[#10B981] shrink-0" />
                   </div>
                 </div>
               </StaggerItem>

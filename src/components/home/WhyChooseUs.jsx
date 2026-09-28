@@ -54,26 +54,24 @@ export default function WhyChooseUs() {
             </ScaleIn>
           </FadeUp>
 
-          {/* Right Column: Feature List Grid with Staggered Scroll Animation */}
+          {/* Right Column: Feature List Grid in 2-Column Mobile Grid */}
           <div className="lg:col-span-7">
-            <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5" staggerDelay={0.08}>
+            <StaggerContainer className="grid grid-cols-2 gap-2.5 sm:gap-5" staggerDelay={0.08}>
               {WHY_CHOOSE_ITEMS.map((item, index) => {
                 const IconComp = iconMap[item.icon] || Award;
                 return (
                   <StaggerItem key={index}>
-                    <div className="h-full bg-white rounded-2xl p-5 border border-slate-200/90 hover:border-[#0875D1]/40 transition-all duration-300 group hover:shadow-lg hover:shadow-[#0875D1]/10">
-                      <div className="flex items-start gap-3.5">
-                        <div className="w-11 h-11 rounded-xl bg-[#EAF6FF] text-[#0875D1] group-hover:bg-[#0875D1] group-hover:text-white transition-colors duration-300 flex items-center justify-center shrink-0">
-                          <IconComp className="w-5 h-5" />
+                    <div className="h-full bg-white rounded-2xl p-3.5 sm:p-5 border border-slate-200/90 hover:border-[#0875D1]/40 transition-all duration-300 group hover:shadow-lg hover:shadow-[#0875D1]/10 flex flex-col justify-between">
+                      <div>
+                        <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-[#EAF6FF] text-[#0875D1] group-hover:bg-[#0875D1] group-hover:text-white transition-colors duration-300 flex items-center justify-center shrink-0 mb-2.5 sm:mb-3">
+                          <IconComp className="w-4 h-4 sm:w-5 sm:h-5" />
                         </div>
-                        <div>
-                          <h4 className="text-base font-bold text-[#042B55] group-hover:text-[#0875D1] transition-colors">
-                            {item.title}
-                          </h4>
-                          <p className="text-xs sm:text-sm text-slate-600 mt-1.5 leading-relaxed">
-                            {item.description}
-                          </p>
-                        </div>
+                        <h4 className="text-xs sm:text-base font-bold text-[#042B55] group-hover:text-[#0875D1] transition-colors leading-snug">
+                          {item.title}
+                        </h4>
+                        <p className="text-[11px] sm:text-sm text-slate-600 mt-1 sm:mt-1.5 leading-relaxed line-clamp-3 sm:line-clamp-none">
+                          {item.description}
+                        </p>
                       </div>
                     </div>
                   </StaggerItem>

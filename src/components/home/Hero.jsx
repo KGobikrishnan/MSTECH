@@ -369,11 +369,11 @@ export default function Hero() {
 
         </div>
 
-        {/* 4 Compact Trust Indicators with Happy Customers Real Showcase */}
-        <div className="mt-14 pt-8 border-t border-slate-200">
-          <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
+        {/* 4 Compact Trust Indicators: 2-Column Grid on Mobile */}
+        <div className="mt-12 sm:mt-14 pt-8 border-t border-slate-200">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 lg:gap-5">
             {/* 1. Trusted Service */}
-            <div className="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-xs hover:shadow-md transition-all duration-300 flex items-center gap-3 sm:gap-4">
+            <div className="bg-white rounded-2xl p-3 sm:p-5 border border-slate-200 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center gap-2.5 sm:gap-4">
               <div className="w-11 h-11 rounded-xl bg-[#EAF6FF] border border-[#0875D1]/20 text-[#0875D1] flex items-center justify-center shrink-0">
                 <CheckCircle2 className="w-5 h-5" />
               </div>
@@ -388,7 +388,7 @@ export default function Hero() {
             </div>
 
             {/* 2. Quality Support */}
-            <div className="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-xs hover:shadow-md transition-all duration-300 flex items-center gap-3 sm:gap-4">
+            <div className="bg-white rounded-2xl p-3 sm:p-5 border border-slate-200 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center gap-2.5 sm:gap-4">
               <div className="w-11 h-11 rounded-xl bg-[#EAF6FF] border border-[#0875D1]/20 text-[#0875D1] flex items-center justify-center shrink-0">
                 <ShieldCheck className="w-5 h-5" />
               </div>
@@ -403,22 +403,22 @@ export default function Hero() {
             </div>
 
             {/* 3. Customer Satisfaction WITH REAL HAPPY CUSTOMER PHOTOS */}
-            <div className="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-xs hover:shadow-md transition-all duration-300 flex items-center gap-3.5 sm:gap-4 relative overflow-hidden group">
+            <div className="bg-white rounded-2xl p-3 sm:p-5 border border-slate-200 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center gap-2.5 sm:gap-4 relative overflow-hidden group">
               <div className="flex -space-x-3 shrink-0">
                 <img
                   src="/person/Happy Customer/20240321_131053.webp"
                   alt="Happy Customer"
-                  className="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm group-hover:scale-105 transition-transform"
+                  className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border-2 border-white object-cover shadow-sm group-hover:scale-105 transition-transform"
                 />
                 <img
                   src="/person/Happy Customer/20240430_172545.webp"
                   alt="Happy Customer"
-                  className="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm group-hover:scale-105 transition-transform"
+                  className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border-2 border-white object-cover shadow-sm group-hover:scale-105 transition-transform"
                 />
                 <img
                   src="/person/Happy Customer/IMG_20250112_143043.webp"
                   alt="Happy Customer"
-                  className="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm group-hover:scale-105 transition-transform"
+                  className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border-2 border-white object-cover shadow-sm group-hover:scale-105 transition-transform"
                 />
               </div>
               <div className="min-w-0">
@@ -438,7 +438,7 @@ export default function Hero() {
             </div>
 
             {/* 4. All Over Tamil Nadu */}
-            <div className="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-xs hover:shadow-md transition-all duration-300 flex items-center gap-3 sm:gap-4">
+            <div className="bg-white rounded-2xl p-3 sm:p-5 border border-slate-200 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center gap-2.5 sm:gap-4">
               <div className="w-11 h-11 rounded-xl bg-[#EAF6FF] border border-[#0875D1]/20 text-[#0875D1] flex items-center justify-center shrink-0">
                 <MapPin className="w-5 h-5" />
               </div>
