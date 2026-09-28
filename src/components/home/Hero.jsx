@@ -200,90 +200,113 @@ Please provide quick estimate & availability.`;
             </div>
           </div>
 
-          {/* RIGHT 5-COLUMNS: Interactive Hardware Diagnostic Monitor */}
+          {/* RIGHT 5-COLUMNS: Real Happy Customers Delivery Showcase */}
           <div className="lg:col-span-5">
-            <div className="relative rounded-3xl bg-white p-4 sm:p-7 border border-slate-200 shadow-xl overflow-hidden group">
+            <div className="relative rounded-3xl bg-white p-5 sm:p-7 border border-slate-200 shadow-xl overflow-hidden group">
               
               {/* Blue Accent Bar */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#042B55] via-[#0875D1] to-[#10B981]" />
+              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#042B55] via-[#0875D1] to-[#10B981]" />
 
-              {/* 4 Category Switcher Tabs */}
-              <div className="grid grid-cols-4 gap-1 sm:gap-1.5 mb-5 sm:mb-6 p-1 rounded-xl bg-slate-100 border border-slate-200/80">
-                {TECH_SOLUTIONS.map((item, idx) => (
-                  <button
-                    key={item.id}
-                    onClick={() => setActiveTab(idx)}
-                    className={`py-2 px-0.5 sm:px-1 rounded-lg text-[9px] xs:text-[10px] sm:text-[11px] font-bold tracking-tight text-center transition-all cursor-pointer ${
-                      activeTab === idx
-                        ? "bg-[#0875D1] text-white shadow-md shadow-[#0875D1]/30 scale-[1.02]"
-                        : "text-slate-600 hover:text-[#042B55] hover:bg-white"
-                    }`}
-                  >
-                    {item.name.split(" ")[0]}
-                  </button>
-                ))}
-              </div>
-
-              {/* Live Diagnostic Status Card */}
-              <div className="flex items-start justify-between gap-3 mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-2xl bg-[#EAF6FF] border border-[#0875D1]/20 flex items-center justify-center text-[#0875D1] shadow-xs">
-                    <IconComp className="w-6 h-6" />
+              {/* Header: Verified Customer Deliveries */}
+              <div className="flex items-center justify-between gap-3 mb-4">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold">
+                    <ShieldCheck className="w-5 h-5 text-[#10B981]" />
                   </div>
                   <div>
                     <span className="text-[10px] uppercase font-extrabold tracking-wider text-[#0875D1] block">
-                      {current.badge}
+                      Real Store Deliveries
                     </span>
                     <h3 className="text-lg sm:text-xl font-black text-[#042B55] leading-tight">
-                      {current.name}
+                      Happy Customers
                     </h3>
                   </div>
                 </div>
 
-                <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 shrink-0">
-                  <Clock className="w-3 h-3 text-emerald-600" />
-                  {current.eta}
-                </span>
-              </div>
-
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-5">
-                {current.desc}
-              </p>
-
-              {/* Direct Problem Solution Picker */}
-              <div className="space-y-2 mb-6">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block">
-                  Click your issue to get instant WhatsApp quote:
-                </span>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  {current.problems.map((problem, idx) => (
-                    <a
-                      key={idx}
-                      href={handleWhatsApp(problem)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2.5 rounded-xl bg-slate-50 hover:bg-[#EAF6FF] border border-slate-200/90 hover:border-[#0875D1]/40 transition-all text-left flex items-center justify-between text-xs text-slate-700 group/prob cursor-pointer"
-                    >
-                      <span className="truncate pr-1 font-semibold">{problem}</span>
-                      <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover/prob:text-[#0875D1] group-hover/prob:translate-x-0.5 transition-all shrink-0" />
-                    </a>
-                  ))}
+                <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-700 text-xs font-black">
+                  <span>★</span>
+                  <span>5.0 / 5.0 Rating</span>
                 </div>
               </div>
 
-              {/* Bottom Quick Lab Link */}
-              <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                <span className="text-xs text-slate-500 font-medium">
-                  Need custom assistance?
-                </span>
+              {/* Main Featured Customer Delivery Image */}
+              <div className="relative w-full h-52 sm:h-56 rounded-2xl overflow-hidden mb-4 border border-slate-200/90 shadow-inner bg-slate-900 group/img">
+                <img
+                  src="/person/Happy Customer/IMG_20250112_143043.webp"
+                  alt="MS TECH Happy Customer Delivery in Rasipuram"
+                  className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#042B55]/85 via-transparent to-transparent pointer-events-none" />
+                
+                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-[#042B55]/90 text-white text-[10px] font-extrabold backdrop-blur-xs flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-[#10B981] animate-ping" />
+                  <span>Rasipuram Store Handover</span>
+                </div>
+
+                <div className="absolute bottom-3 left-3 right-3 text-white">
+                  <p className="text-xs font-bold leading-snug">
+                    "Trusted laptop servicing, prompt delivery & genuine spare parts."
+                  </p>
+                  <span className="text-[10px] text-[#7DD3FC] font-semibold">
+                    100% Verified Customer Experience
+                  </span>
+                </div>
+              </div>
+
+              {/* Secondary Happy Customer Thumbnails Strip */}
+              <div className="grid grid-cols-3 gap-2.5 mb-5">
+                <div className="relative rounded-xl overflow-hidden border border-slate-200 aspect-4/3 group/thumb">
+                  <img
+                    src="/person/Happy Customer/20240321_131053.webp"
+                    alt="Customer Handover"
+                    className="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-black/60 text-[9px] text-white font-bold">
+                    Laptop
+                  </div>
+                </div>
+
+                <div className="relative rounded-xl overflow-hidden border border-slate-200 aspect-4/3 group/thumb">
+                  <img
+                    src="/person/Happy Customer/20240430_172545.webp"
+                    alt="Customer Handover"
+                    className="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-black/60 text-[9px] text-white font-bold">
+                    Desktop
+                  </div>
+                </div>
+
+                <div className="relative rounded-xl overflow-hidden border border-slate-200 aspect-4/3 group/thumb">
+                  <img
+                    src="/person/Happy Customer/IMG_20250109_205427.webp"
+                    alt="Customer Handover"
+                    className="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-black/60 text-[9px] text-white font-bold">
+                    Printer & PC
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom Quick Testimonial Link & WhatsApp */}
+              <div className="pt-3.5 border-t border-slate-100 flex items-center justify-between">
+                <Link
+                  to="/reviews"
+                  className="text-xs font-bold text-[#0875D1] hover:underline flex items-center gap-1"
+                >
+                  <span>View All Customer Reviews</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+
                 <a
-                  href={handleWhatsApp("Custom Requirement")}
+                  href={`https://wa.me/91${BUSINESS_INFO.phone}?text=${encodeURIComponent("Hello MS Tech, I would like to enquire about your services and customer delivery.")}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0875D1] hover:underline"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-50 hover:bg-[#10B981] text-emerald-700 hover:text-white border border-emerald-200 text-xs font-bold transition-all shadow-xs"
                 >
-                  <MessageCircle className="w-3.5 h-3.5 text-[#10B981]" />
-                  <span>Chat on WhatsApp →</span>
+                  <MessageCircle className="w-3.5 h-3.5 fill-current" />
+                  <span>Chat on WhatsApp</span>
                 </a>
               </div>
 
