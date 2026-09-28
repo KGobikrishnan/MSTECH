@@ -410,11 +410,17 @@ export default function Hero() {
 
         </div>
 
-        {/* 4 Compact Trust Indicators: 2-Column Grid on Mobile */}
+        {/* 4 Compact Trust Indicators: 2-Column Grid on Mobile with individual scroll animations */}
         <div className="mt-12 sm:mt-14 pt-8 border-t border-slate-200">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 lg:gap-5">
             {/* 1. Trusted Service */}
-            <div className="bg-white rounded-2xl p-3 sm:p-5 border border-slate-200 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center gap-2.5 sm:gap-4">
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.45, delay: 0.05 }}
+              className="bg-white rounded-2xl p-3 sm:p-5 border border-slate-200 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center gap-2.5 sm:gap-4"
+            >
               <div className="w-11 h-11 rounded-xl bg-[#EAF6FF] border border-[#0875D1]/20 text-[#0875D1] flex items-center justify-center shrink-0">
                 <CheckCircle2 className="w-5 h-5" />
               </div>
@@ -426,10 +432,16 @@ export default function Hero() {
                   Reliable, transparent solutions
                 </p>
               </div>
-            </div>
+            </motion.div>
 
             {/* 2. Quality Support */}
-            <div className="bg-white rounded-2xl p-3 sm:p-5 border border-slate-200 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center gap-2.5 sm:gap-4">
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.45, delay: 0.1 }}
+              className="bg-white rounded-2xl p-3 sm:p-5 border border-slate-200 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center gap-2.5 sm:gap-4"
+            >
               <div className="w-11 h-11 rounded-xl bg-[#EAF6FF] border border-[#0875D1]/20 text-[#0875D1] flex items-center justify-center shrink-0">
                 <ShieldCheck className="w-5 h-5" />
               </div>
@@ -441,10 +453,16 @@ export default function Hero() {
                   Skilled diagnostic & repairs
                 </p>
               </div>
-            </div>
+            </motion.div>
 
             {/* 3. Customer Satisfaction WITH REAL HAPPY CUSTOMER PHOTOS */}
-            <div className="bg-white rounded-2xl p-3 sm:p-5 border border-slate-200 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center gap-2.5 sm:gap-4 relative overflow-hidden group">
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.45, delay: 0.15 }}
+              className="bg-white rounded-2xl p-3 sm:p-5 border border-slate-200 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center gap-2.5 sm:gap-4 relative overflow-hidden group"
+            >
               <div className="flex -space-x-3 shrink-0">
                 <img
                   src="/person/Happy Customer/20240321_131053.webp"
@@ -476,10 +494,16 @@ export default function Hero() {
                   Verified client deliveries
                 </p>
               </div>
-            </div>
+            </motion.div>
 
             {/* 4. All Over Tamil Nadu */}
-            <div className="bg-white rounded-2xl p-3 sm:p-5 border border-slate-200 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center gap-2.5 sm:gap-4">
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.45, delay: 0.2 }}
+              className="bg-white rounded-2xl p-3 sm:p-5 border border-slate-200 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center gap-2.5 sm:gap-4"
+            >
               <div className="w-11 h-11 rounded-xl bg-[#EAF6FF] border border-[#0875D1]/20 text-[#0875D1] flex items-center justify-center shrink-0">
                 <MapPin className="w-5 h-5" />
               </div>
@@ -491,7 +515,7 @@ export default function Hero() {
                   Rasipuram base, statewide reach
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
 
