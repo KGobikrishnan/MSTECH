@@ -292,27 +292,88 @@ Please provide quick estimate & availability.`;
 
         </div>
 
-        {/* 4 Compact Trust Indicators */}
+        {/* 4 Compact Trust Indicators with Happy Customers Real Showcase */}
         <div className="mt-14 pt-8 border-t border-slate-200">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5">
-            {TRUST_INDICATORS.map((indicator, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-xs hover:shadow-md transition-all duration-300 flex items-center gap-3 sm:gap-4"
-              >
-                <div className="w-11 h-11 rounded-xl bg-[#EAF6FF] border border-[#0875D1]/20 text-[#0875D1] flex items-center justify-center shrink-0">
-                  <CheckCircle2 className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="text-sm sm:text-base font-bold text-[#042B55] leading-tight">
-                    {indicator.title}
-                  </h4>
-                  <p className="text-xs text-slate-500 mt-0.5 font-medium hidden sm:block">
-                    {indicator.description}
-                  </p>
-                </div>
+          <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
+            {/* 1. Trusted Service */}
+            <div className="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-xs hover:shadow-md transition-all duration-300 flex items-center gap-3 sm:gap-4">
+              <div className="w-11 h-11 rounded-xl bg-[#EAF6FF] border border-[#0875D1]/20 text-[#0875D1] flex items-center justify-center shrink-0">
+                <CheckCircle2 className="w-5 h-5" />
               </div>
-            ))}
+              <div>
+                <h4 className="text-sm sm:text-base font-bold text-[#042B55] leading-tight">
+                  Trusted Service
+                </h4>
+                <p className="text-xs text-slate-500 mt-0.5 font-medium">
+                  Reliable, transparent solutions
+                </p>
+              </div>
+            </div>
+
+            {/* 2. Quality Support */}
+            <div className="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-xs hover:shadow-md transition-all duration-300 flex items-center gap-3 sm:gap-4">
+              <div className="w-11 h-11 rounded-xl bg-[#EAF6FF] border border-[#0875D1]/20 text-[#0875D1] flex items-center justify-center shrink-0">
+                <ShieldCheck className="w-5 h-5" />
+              </div>
+              <div>
+                <h4 className="text-sm sm:text-base font-bold text-[#042B55] leading-tight">
+                  Quality Support
+                </h4>
+                <p className="text-xs text-slate-500 mt-0.5 font-medium">
+                  Skilled diagnostic & repairs
+                </p>
+              </div>
+            </div>
+
+            {/* 3. Customer Satisfaction WITH REAL HAPPY CUSTOMER PHOTOS */}
+            <div className="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-xs hover:shadow-md transition-all duration-300 flex items-center gap-3.5 sm:gap-4 relative overflow-hidden group">
+              <div className="flex -space-x-3 shrink-0">
+                <img
+                  src="/person/Happy Customer/20240321_131053.webp"
+                  alt="Happy Customer"
+                  className="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm group-hover:scale-105 transition-transform"
+                />
+                <img
+                  src="/person/Happy Customer/20240430_172545.webp"
+                  alt="Happy Customer"
+                  className="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm group-hover:scale-105 transition-transform"
+                />
+                <img
+                  src="/person/Happy Customer/IMG_20250112_143043.webp"
+                  alt="Happy Customer"
+                  className="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm group-hover:scale-105 transition-transform"
+                />
+              </div>
+              <div className="min-w-0">
+                <div className="flex items-center gap-1 text-amber-400 mb-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-xs">★</span>
+                  ))}
+                  <span className="text-[11px] font-black text-[#042B55] ml-1">5.0</span>
+                </div>
+                <h4 className="text-sm sm:text-base font-bold text-[#042B55] leading-tight truncate">
+                  Happy Customers
+                </h4>
+                <p className="text-xs text-slate-500 font-medium truncate">
+                  Verified client deliveries
+                </p>
+              </div>
+            </div>
+
+            {/* 4. All Over Tamil Nadu */}
+            <div className="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-xs hover:shadow-md transition-all duration-300 flex items-center gap-3 sm:gap-4">
+              <div className="w-11 h-11 rounded-xl bg-[#EAF6FF] border border-[#0875D1]/20 text-[#0875D1] flex items-center justify-center shrink-0">
+                <MapPin className="w-5 h-5" />
+              </div>
+              <div>
+                <h4 className="text-sm sm:text-base font-bold text-[#042B55] leading-tight">
+                  All Over Tamil Nadu
+                </h4>
+                <p className="text-xs text-slate-500 mt-0.5 font-medium">
+                  Rasipuram base, statewide reach
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
