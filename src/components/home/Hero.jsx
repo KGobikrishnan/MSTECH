@@ -60,27 +60,52 @@ const TECH_SOLUTIONS = [
   }
 ];
 
-export default function Hero() {
-  const [activeTab, setActiveTab] = useState(0);
-  const current = TECH_SOLUTIONS[activeTab];
-  const IconComp = current.icon;
+// Happy Customers photo carousel list
+const HAPPY_CUSTOMERS_LIST = [
+  {
+    image: "/person/Happy Customer/IMG_20250112_143043.webp",
+    quote: "Trusted laptop servicing, prompt delivery & genuine spare parts.",
+    tag: "Laptop Service Delivery",
+    device: "Laptop"
+  },
+  {
+    image: "/person/Happy Customer/20240321_131053.webp",
+    quote: "Quick diagnostic turnaround and transparent component pricing.",
+    tag: "Hardware Upgrade Handover",
+    device: "Desktop"
+  },
+  {
+    image: "/person/Happy Customer/20240430_172545.webp",
+    quote: "Custom gaming & office PC setup delivered in perfect condition.",
+    tag: "Custom PC Build Handover",
+    device: "Custom PC"
+  },
+  {
+    image: "/person/Happy Customer/IMG_20250109_205427.webp",
+    quote: "Commercial printer servicing & network sharing setup done smoothly.",
+    tag: "Printer Solution Handover",
+    device: "Printer"
+  },
+  {
+    image: "/person/Happy Customer/IMG_20241218_182311.webp",
+    quote: "Excellent customer care and reliable warranty support in Rasipuram.",
+    tag: "Verified Client Handover",
+    device: "All-in-One"
+  }
+];
 
+export default function Hero() {
+  const [customerIdx, setCustomerIdx] = useState(0);
+
+  // 5 seconds auto transition for Happy Customers
   useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveTab((prev) => (prev + 1) % TECH_SOLUTIONS.length);
-    }, 6000);
-    return () => clearInterval(timer);
+    const custTimer = setInterval(() => {
+      setCustomerIdx((prev) => (prev + 1) % HAPPY_CUSTOMERS_LIST.length);
+    }, 5000);
+    return () => clearInterval(custTimer);
   }, []);
 
-  const handleWhatsApp = (issue) => {
-    const text = `Hi MS TECH, I need assistance for:
-- Service: ${current.name}
-- Problem: ${issue || current.headline}
-- Location: Rasipuram / Tamil Nadu
-
-Please provide quick estimate & availability.`;
-    return `https://wa.me/91${BUSINESS_INFO.phone}?text=${encodeURIComponent(text)}`;
-  };
+  const currentCustomer = HAPPY_CUSTOMERS_LIST[customerIdx];
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-[#F0F7FF] via-[#F8FAFC] to-white text-slate-900 pt-8 pb-16 lg:pt-12 lg:pb-24 border-b border-slate-200/80">
@@ -94,21 +119,21 @@ Please provide quick estimate & availability.`;
 
       <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10 w-full">
         
-        {/* Top Status Strip */}
-        <div className="flex flex-wrap items-center justify-between gap-3 pb-5 mb-8 border-b border-slate-200 text-xs">
-          <div className="flex items-center gap-2.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#10B981] animate-ping" />
-            <span className="font-extrabold tracking-widest uppercase text-[#0875D1]">
+        {/* Top Status Strip: Single line on mobile */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pb-4 mb-6 sm:mb-8 border-b border-slate-200 text-xs">
+          <div className="flex items-center gap-2 overflow-hidden w-full sm:w-auto">
+            <span className="w-2 h-2 rounded-full bg-[#10B981] animate-ping shrink-0" />
+            <span className="font-extrabold tracking-tight sm:tracking-widest uppercase text-[#0875D1] whitespace-nowrap truncate text-[10px] xs:text-[11px] sm:text-xs">
               MS TECH RASIPURAM • AUTHORIZED DIAGNOSTIC LAB
             </span>
           </div>
 
-          <div className="flex items-center gap-3">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-xs text-slate-700 font-bold">
-              <MapPin className="w-3.5 h-3.5 text-[#0875D1]" />
+          <div className="flex items-center gap-2.5 shrink-0">
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white border border-slate-200 shadow-xs text-slate-700 font-bold text-[10px] sm:text-xs">
+              <MapPin className="w-3 h-3 text-[#0875D1]" />
               <span>{BUSINESS_INFO.coverage}</span>
             </span>
-            <span className="hidden sm:inline-flex items-center gap-1 text-emerald-600 font-bold bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
+            <span className="hidden sm:inline-flex items-center gap-1 text-emerald-600 font-bold bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100 text-xs">
               <ShieldCheck className="w-3.5 h-3.5" /> GST Billing Available
             </span>
           </div>
@@ -229,64 +254,58 @@ Please provide quick estimate & availability.`;
                 </div>
               </div>
 
-              {/* Main Featured Customer Delivery Image */}
+              {/* Main Featured Customer Delivery Image (Changes every 5 seconds) */}
               <div className="relative w-full h-52 sm:h-56 rounded-2xl overflow-hidden mb-4 border border-slate-200/90 shadow-inner bg-slate-900 group/img">
                 <img
-                  src="/person/Happy Customer/IMG_20250112_143043.webp"
+                  key={customerIdx}
+                  src={currentCustomer.image}
                   alt="MS TECH Happy Customer Delivery in Rasipuram"
-                  className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover animate-in fade-in zoom-in-95 duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#042B55]/85 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#042B55]/90 via-[#042B55]/20 to-transparent pointer-events-none" />
                 
-                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-[#042B55]/90 text-white text-[10px] font-extrabold backdrop-blur-xs flex items-center gap-1.5">
+                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-[#042B55]/90 text-white text-[10px] font-extrabold backdrop-blur-xs flex items-center gap-1.5 shadow-sm">
                   <span className="w-2 h-2 rounded-full bg-[#10B981] animate-ping" />
-                  <span>Rasipuram Store Handover</span>
+                  <span>{currentCustomer.tag}</span>
+                </div>
+
+                <div className="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-black/60 text-white text-[9px] font-bold">
+                  {customerIdx + 1} / {HAPPY_CUSTOMERS_LIST.length}
                 </div>
 
                 <div className="absolute bottom-3 left-3 right-3 text-white">
                   <p className="text-xs font-bold leading-snug">
-                    "Trusted laptop servicing, prompt delivery & genuine spare parts."
+                    "{currentCustomer.quote}"
                   </p>
-                  <span className="text-[10px] text-[#7DD3FC] font-semibold">
-                    100% Verified Customer Experience
-                  </span>
+                  <div className="flex items-center justify-between mt-1 text-[10px] text-[#7DD3FC]">
+                    <span className="font-semibold">100% Verified Customer Experience</span>
+                    <span className="text-slate-300 font-medium">Auto: 5s</span>
+                  </div>
                 </div>
               </div>
 
-              {/* Secondary Happy Customer Thumbnails Strip */}
-              <div className="grid grid-cols-3 gap-2.5 mb-5">
-                <div className="relative rounded-xl overflow-hidden border border-slate-200 aspect-4/3 group/thumb">
-                  <img
-                    src="/person/Happy Customer/20240321_131053.webp"
-                    alt="Customer Handover"
-                    className="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-black/60 text-[9px] text-white font-bold">
-                    Laptop
-                  </div>
-                </div>
-
-                <div className="relative rounded-xl overflow-hidden border border-slate-200 aspect-4/3 group/thumb">
-                  <img
-                    src="/person/Happy Customer/20240430_172545.webp"
-                    alt="Customer Handover"
-                    className="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-black/60 text-[9px] text-white font-bold">
-                    Desktop
-                  </div>
-                </div>
-
-                <div className="relative rounded-xl overflow-hidden border border-slate-200 aspect-4/3 group/thumb">
-                  <img
-                    src="/person/Happy Customer/IMG_20250109_205427.webp"
-                    alt="Customer Handover"
-                    className="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-black/60 text-[9px] text-white font-bold">
-                    Printer & PC
-                  </div>
-                </div>
+              {/* Happy Customer Thumbnails Strip (Clickable to switch immediately) */}
+              <div className="grid grid-cols-4 gap-2 mb-5">
+                {HAPPY_CUSTOMERS_LIST.slice(0, 4).map((cust, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCustomerIdx(idx)}
+                    className={`relative rounded-xl overflow-hidden border aspect-4/3 transition-all cursor-pointer ${
+                      customerIdx === idx
+                        ? "border-[#0875D1] ring-2 ring-[#0875D1]/40 scale-105 shadow-md"
+                        : "border-slate-200 opacity-70 hover:opacity-100"
+                    }`}
+                  >
+                    <img
+                      src={cust.image}
+                      alt={cust.device}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute bottom-1 left-1 px-1 py-0.2 rounded bg-black/60 text-[8px] text-white font-bold truncate max-w-[90%]">
+                      {cust.device}
+                    </div>
+                  </button>
+                ))}
               </div>
 
               {/* Bottom Quick Testimonial Link & WhatsApp */}
