@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { 
   ArrowRight, 
   Phone, 
@@ -146,21 +147,36 @@ export default function Hero() {
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             
             {/* Pill Eyebrow with Pulsing Star */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#0875D1]/30 text-[#0875D1] text-xs font-black tracking-widest uppercase mb-4 shadow-sm">
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.05 }}
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#0875D1]/30 text-[#0875D1] text-xs font-black tracking-widest uppercase mb-4 shadow-sm"
+            >
               <Sparkles className="w-3.5 h-3.5 text-[#0875D1] fill-current animate-pulse" />
               <span>RELIABLE SALES & TECHNICAL LAB</span>
-            </div>
+            </motion.div>
 
             {/* Giant Modern High-Tech Headline with Gradient Accents */}
-            <h1 className="text-3xl xs:text-4xl sm:text-5xl xl:text-6xl font-black tracking-tight text-[#042B55] leading-[1.12]">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.12 }}
+              className="text-3xl xs:text-4xl sm:text-5xl xl:text-6xl font-black tracking-tight text-[#042B55] leading-[1.12]"
+            >
               LAPTOP <span className="text-[#0875D1]">•</span> DESKTOP <br />
               <span className="bg-gradient-to-r from-[#0875D1] via-[#1687E8] to-[#042B55] bg-clip-text text-transparent">
                 PRINTER
               </span> <span className="text-[#042B55]">•</span> CCTV
-            </h1>
+            </motion.h1>
 
             {/* Sub-headline Tech Pill Badges */}
-            <div className="mt-4 flex flex-wrap items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-black uppercase tracking-wider text-slate-600">
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mt-4 flex flex-wrap items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-black uppercase tracking-wider text-slate-600"
+            >
               <span className="px-3 py-1 rounded-lg bg-white border border-slate-200 shadow-2xs text-[#042B55]">Laptop Sales & Service</span>
               <span className="text-[#0875D1]">•</span>
               <span className="px-3 py-1 rounded-lg bg-white border border-slate-200 shadow-2xs text-[#042B55]">Custom PC Builds</span>
@@ -168,10 +184,15 @@ export default function Hero() {
               <span className="px-3 py-1 rounded-lg bg-white border border-slate-200 shadow-2xs text-[#042B55]">Laser Printer Care</span>
               <span className="text-[#0875D1]">•</span>
               <span className="px-3 py-1 rounded-lg bg-white border border-slate-200 shadow-2xs text-[#042B55]">HD CCTV Setup</span>
-            </div>
+            </motion.div>
 
             {/* Bilingual Tamil Feature Card */}
-            <div className="mt-5 p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/90 shadow-lg shadow-[#042B55]/5 max-w-xl w-full relative overflow-hidden group">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.26 }}
+              className="mt-5 p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/90 shadow-lg shadow-[#042B55]/5 max-w-xl w-full relative overflow-hidden group"
+            >
               <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-[#0875D1] to-[#10B981]" />
               <p className="text-xs sm:text-sm font-semibold text-slate-800 leading-relaxed font-tamil pl-2">
                 {BUSINESS_INFO.tamilHeadline}
@@ -187,10 +208,15 @@ export default function Hero() {
                   <Check className="w-3.5 h-3.5 text-[#10B981]" /> Transparent Price
                 </span>
               </div>
-            </div>
+            </motion.div>
 
             {/* Primary Action Buttons */}
-            <div className="mt-6 sm:mt-7 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-2.5 sm:gap-3.5 w-full sm:w-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.32 }}
+              className="mt-6 sm:mt-7 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-2.5 sm:gap-3.5 w-full sm:w-auto"
+            >
               <Link
                 to="/services"
                 className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#042B55] to-[#0875D1] hover:from-[#0875D1] hover:to-[#042B55] text-white font-black text-xs sm:text-sm shadow-xl shadow-[#0875D1]/30 flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 cursor-pointer text-center"
@@ -218,10 +244,15 @@ export default function Hero() {
                   <span>WhatsApp</span>
                 </a>
               </div>
-            </div>
+            </motion.div>
 
             {/* Social Proof Live Delivery Pill (Shows real delivery photo & review) */}
-            <div className="mt-6 flex items-center gap-3 p-2.5 pr-4 rounded-full bg-white border border-slate-200/90 shadow-md max-w-md animate-in fade-in duration-500">
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.38 }}
+              className="mt-6 flex items-center gap-3 p-2.5 pr-4 rounded-full bg-white border border-slate-200/90 shadow-md max-w-md animate-in fade-in duration-500"
+            >
               <div className="relative w-9 h-9 rounded-full overflow-hidden border-2 border-[#0875D1] shrink-0">
                 <img
                   src={currentPill.img}
@@ -243,17 +274,27 @@ export default function Hero() {
                   <span key={i} className="text-xs">★</span>
                 ))}
               </div>
-            </div>
+            </motion.div>
 
             {/* Store Location Landmark */}
-            <div className="mt-4 flex items-center gap-2 text-[11px] sm:text-xs text-slate-500 font-medium">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.44 }}
+              className="mt-4 flex items-center gap-2 text-[11px] sm:text-xs text-slate-500 font-medium"
+            >
               <MapPin className="w-3.5 h-3.5 text-red-500 shrink-0" />
               <span>Opp. Kannan Department Store, New Bus Stand, Rasipuram</span>
-            </div>
+            </motion.div>
           </div>
 
           {/* RIGHT 5-COLUMNS: Ultra-Modern 3D Hardware Studio Showpiece */}
-          <div className="lg:col-span-5">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="lg:col-span-5"
+          >
             <div className="relative rounded-3xl bg-white border border-slate-200/90 shadow-2xl p-5 sm:p-7 overflow-hidden group">
               
               {/* Dynamic Top Ambient Colored Line */}
@@ -365,7 +406,7 @@ export default function Hero() {
               </div>
 
             </div>
-          </div>
+          </motion.div>
 
         </div>
 
