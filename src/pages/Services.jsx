@@ -7,6 +7,7 @@ import ServiceCard from "../components/common/ServiceCard";
 import Button from "../components/common/Button";
 import CTASection from "../components/home/CTASection";
 import { SERVICES_DATA, BUSINESS_INFO } from "../data/siteData";
+import { FadeUp, StaggerContainer, StaggerItem } from "../components/common/ScrollAnimation";
 
 export default function Services() {
   return (
@@ -29,25 +30,27 @@ export default function Services() {
       {/* Services Grid Section */}
       <section className="py-16 sm:py-20 bg-slate-50">
         <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-10">
-          <div className="text-center max-w-2xl mx-auto mb-12">
+          <FadeUp className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-xs font-bold uppercase tracking-wider text-[#0875D1]">Service Catalogue</span>
             <h2 className="text-3xl font-black text-[#042B55] mt-1">
               Select a Category for Detailed Specifications
             </h2>
             <div className="h-1 w-12 bg-[#0875D1] rounded-full mx-auto mt-3" />
-          </div>
+          </FadeUp>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" staggerDelay={0.1}>
             {SERVICES_DATA.map((srv, idx) => (
-              <ServiceCard key={srv.slug} service={srv} index={idx} />
+              <StaggerItem key={srv.slug}>
+                <ServiceCard service={srv} index={idx} />
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* Quick Direct Inquiries Strip */}
       <section className="py-12 bg-white border-y border-slate-200">
-        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-6">
+        <FadeUp className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-xl font-bold text-[#042B55]">Need an immediate on-call consultation?</h3>
             <p className="text-sm text-slate-500 mt-0.5">
@@ -74,7 +77,7 @@ export default function Services() {
               WhatsApp Us
             </Button>
           </div>
-        </div>
+        </FadeUp>
       </section>
 
       <CTASection />

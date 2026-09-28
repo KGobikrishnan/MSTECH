@@ -6,6 +6,7 @@ import ContactInfo from "../components/contact/ContactInfo";
 import ContactForm from "../components/contact/ContactForm";
 import Button from "../components/common/Button";
 import { BUSINESS_INFO } from "../data/siteData";
+import { FadeUp, ScaleIn } from "../components/common/ScrollAnimation";
 
 export default function Contact() {
   return (
@@ -29,15 +30,15 @@ export default function Contact() {
         <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             
-            {/* Left 6 Columns: Contact Details & Info */}
-            <div className="lg:col-span-6">
+            {/* Left 6 Columns: Contact Details & Info with FadeUp */}
+            <FadeUp className="lg:col-span-6">
               <ContactInfo />
-            </div>
+            </FadeUp>
 
-            {/* Right 6 Columns: Contact Enquiry Form */}
-            <div className="lg:col-span-6">
+            {/* Right 6 Columns: Contact Enquiry Form with FadeUp */}
+            <FadeUp delay={0.15} className="lg:col-span-6">
               <ContactForm />
-            </div>
+            </FadeUp>
 
           </div>
         </div>
@@ -46,7 +47,7 @@ export default function Contact() {
       {/* Embedded Location & Directions Section */}
       <section className="py-16 bg-white border-t border-slate-200">
         <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-10">
-          <div className="rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100 flex flex-col md:flex-row items-stretch">
+          <ScaleIn className="rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100 flex flex-col md:flex-row items-stretch">
             
             {/* Map Info Box */}
             <div className="p-8 md:w-1/2 bg-[#042B55] text-white flex flex-col justify-between">
@@ -110,7 +111,7 @@ export default function Contact() {
               </div>
             </div>
 
-          </div>
+          </ScaleIn>
         </div>
       </section>
     </>

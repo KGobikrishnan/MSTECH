@@ -2,6 +2,7 @@ import React from "react";
 import { Phone, MessageCircle, MapPin, ArrowRight, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { BUSINESS_INFO } from "../../data/siteData";
+import { ScaleIn } from "../common/ScrollAnimation";
 
 export default function CTASection() {
   return (
@@ -10,7 +11,7 @@ export default function CTASection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[#0875D1]/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
-        <div className="rounded-3xl bg-gradient-to-r from-[#042B55] via-[#06427D] to-[#0875D1] p-8 sm:p-14 lg:p-16 text-center shadow-2xl shadow-[#042B55]/25 relative overflow-hidden text-white">
+        <ScaleIn duration={0.6} className="rounded-3xl bg-gradient-to-r from-[#042B55] via-[#06427D] to-[#0875D1] p-8 sm:p-14 lg:p-16 text-center shadow-2xl shadow-[#042B55]/25 relative overflow-hidden text-white">
           
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-[#7DD3FC] text-xs font-bold uppercase tracking-wider mb-6">
             <span className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse" />
@@ -71,7 +72,7 @@ export default function CTASection() {
             </div>
           </div>
 
-        </div>
+        </ScaleIn>
       </div>
     </section>
   );

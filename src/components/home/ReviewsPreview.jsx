@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import { Star, ArrowRight, MessageSquareQuote } from "lucide-react";
 import TestimonialCard from "../common/TestimonialCard";
 import { REVIEWS_DATA } from "../../data/siteData";
+import { FadeUp, StaggerContainer, StaggerItem } from "../common/ScrollAnimation";
 
 export default function ReviewsPreview() {
   return (
     <section className="py-20 sm:py-24 bg-[#F8FAFC] text-slate-900 relative overflow-hidden border-t border-slate-200/80">
       <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <FadeUp className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EAF6FF] border border-[#0875D1]/20 text-[#0875D1] text-xs font-bold uppercase tracking-wider mb-3">
               <MessageSquareQuote className="w-3.5 h-3.5 text-[#0875D1]" />
@@ -38,16 +39,18 @@ export default function ReviewsPreview() {
               <span className="text-[11px] text-emerald-600 font-bold">100% Satisfaction Focus</span>
             </div>
           </div>
-        </div>
+        </FadeUp>
 
-        {/* Reviews Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* Reviews Grid with Staggered Scroll Animation */}
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" staggerDelay={0.12}>
           {REVIEWS_DATA.slice(0, 3).map((review) => (
-            <TestimonialCard key={review.id} review={review} />
+            <StaggerItem key={review.id}>
+              <TestimonialCard review={review} />
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
 
-        <div className="mt-12 text-center">
+        <FadeUp delay={0.2} className="mt-12 text-center">
           <Link
             to="/reviews"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white hover:bg-slate-50 text-[#042B55] border border-slate-300 text-sm font-bold transition-all hover:border-[#0875D1] shadow-xs"
@@ -55,7 +58,7 @@ export default function ReviewsPreview() {
             <span>Read All Reviews & Testimonials</span>
             <ArrowRight className="w-4 h-4 text-[#0875D1]" />
           </Link>
-        </div>
+        </FadeUp>
       </div>
     </section>
   );

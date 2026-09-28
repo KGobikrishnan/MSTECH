@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, ShieldCheck, MapPin, Zap, UserCheck, Phone, MessageCircle } from "lucide-react";
 import { BUSINESS_INFO } from "../../data/siteData";
+import { FadeUp, ScaleIn } from "../common/ScrollAnimation";
 
 export default function AboutPreview() {
   return (
@@ -9,8 +10,8 @@ export default function AboutPreview() {
       <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* Left Column: Real Rasipuram Store Lab & Owner Showcase */}
-          <div className="lg:col-span-5 relative">
+          {/* Left Column: Real Rasipuram Store Lab & Owner Showcase with ScaleIn */}
+          <ScaleIn className="lg:col-span-5 relative" duration={0.6}>
             {/* Primary Real Store Front Image */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-900 group">
               <img
@@ -34,31 +35,31 @@ export default function AboutPreview() {
             </div>
 
             {/* Overlapping Owner Badge Card with Real owner.webp */}
-            <div className="absolute -bottom-8 -right-3 sm:-right-6 bg-white/95 backdrop-blur-xl rounded-2xl p-4 sm:p-5 shadow-2xl border border-slate-200 flex items-center gap-4 max-w-xs">
-              <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-2xl overflow-hidden border-2 border-[#0875D1] shadow-md shrink-0">
+            <div className="mt-4 sm:mt-0 sm:absolute sm:-bottom-8 sm:-right-3 md:-right-6 bg-white/95 backdrop-blur-xl rounded-2xl p-3.5 sm:p-5 shadow-xl sm:shadow-2xl border border-slate-200 flex items-center gap-3.5 sm:gap-4 max-w-sm sm:max-w-xs hover:scale-105 transition-transform">
+              <div className="relative w-12 h-12 sm:w-16 sm:h-16 rounded-2xl overflow-hidden border-2 border-[#0875D1] shadow-md shrink-0">
                 <img
                   src="/person/owner.webp"
                   alt="MS TECH Founder & Chief Technician"
                   className="w-full h-full object-cover"
                 />
-                <span className="absolute bottom-1 right-1 w-3 h-3 rounded-full bg-[#10B981] border-2 border-white" />
+                <span className="absolute bottom-1 right-1 w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#10B981] border-2 border-white" />
               </div>
               <div>
-                <span className="text-xs uppercase font-extrabold text-[#0875D1] tracking-wider block">
+                <span className="text-[10px] sm:text-xs uppercase font-extrabold text-[#0875D1] tracking-wider block">
                   Lead Technician & Founder
                 </span>
                 <span className="text-sm sm:text-base font-extrabold text-[#042B55] block leading-tight">
                   MS TECH Leadership
                 </span>
-                <span className="text-[11px] text-slate-500 font-medium">
+                <span className="text-[10px] sm:text-[11px] text-slate-500 font-medium">
                   Direct Hands-on Diagnostic Care
                 </span>
               </div>
             </div>
-          </div>
+          </ScaleIn>
 
-          {/* Right Column: About Details */}
-          <div className="lg:col-span-7">
+          {/* Right Column: About Details with FadeUp */}
+          <FadeUp delay={0.15} className="lg:col-span-7">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EAF6FF] border border-[#0875D1]/20 text-[#0875D1] text-xs font-bold uppercase tracking-wider mb-4">
               <Zap className="w-3.5 h-3.5 text-[#0875D1]" />
               Who We Are
@@ -117,7 +118,7 @@ export default function AboutPreview() {
                 <span>Visit Our Shop</span>
               </Link>
             </div>
-          </div>
+          </FadeUp>
 
         </div>
       </div>

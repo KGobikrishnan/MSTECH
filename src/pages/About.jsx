@@ -7,6 +7,7 @@ import Button from "../components/common/Button";
 import BrandsSection from "../components/home/BrandsSection";
 import CTASection from "../components/home/CTASection";
 import { BUSINESS_INFO, WHY_CHOOSE_ITEMS } from "../data/siteData";
+import { FadeUp, StaggerContainer, StaggerItem, ScaleIn } from "../components/common/ScrollAnimation";
 
 export default function About() {
   return (
@@ -31,7 +32,7 @@ export default function About() {
         <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            <div className="lg:col-span-6 space-y-5">
+            <FadeUp className="lg:col-span-6 space-y-5">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0875D1]/10 text-[#0875D1] text-xs font-bold tracking-wider uppercase">
                 Who We Are
               </div>
@@ -58,10 +59,10 @@ export default function About() {
                   <p className="text-sm font-bold text-[#042B55] mt-1">All Over Tamil Nadu</p>
                 </div>
               </div>
-            </div>
+            </FadeUp>
 
-            {/* Visual Image with Real Store Front */}
-            <div className="lg:col-span-6 relative">
+            {/* Visual Image with Real Store Front with ScaleIn */}
+            <ScaleIn delay={0.2} className="lg:col-span-6 relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-900 group">
                 <img
                   src="/office/20240215_201713.webp"
@@ -77,16 +78,16 @@ export default function About() {
                   <p className="text-xs text-slate-300 mt-1">Opp. Kannan Department Store, New Bus Stand Road</p>
                 </div>
               </div>
-            </div>
+            </ScaleIn>
 
           </div>
         </div>
       </section>
 
-      {/* Leadership / Owner Profile Section */}
+      {/* Leadership / Owner Profile Section with ScaleIn */}
       <section className="py-16 sm:py-20 bg-gradient-to-b from-slate-50 via-white to-slate-50 border-t border-slate-200/80">
         <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-10">
-          <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-xl relative overflow-hidden">
+          <ScaleIn className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-[#0875D1]/5 rounded-full blur-3xl pointer-events-none" />
 
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
@@ -147,14 +148,14 @@ export default function About() {
                 </div>
               </div>
             </div>
-          </div>
+          </ScaleIn>
         </div>
       </section>
 
-      {/* Our Workshop & Lab Gallery Preview */}
+      {/* Our Workshop & Lab Gallery Preview with Staggered Grid */}
       <section className="py-16 sm:py-20 bg-white border-t border-slate-100">
         <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <FadeUp className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-[#0875D1]">Behind The Scenes</span>
               <h2 className="text-3xl font-black text-[#042B55] mt-1">Our Rasipuram Workshop & Store</h2>
@@ -167,81 +168,95 @@ export default function About() {
               <span>Explore Complete Gallery</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
-          </div>
+          </FadeUp>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm aspect-4/3 group">
-              <img
-                src="/office/20240203_133946.webp"
-                alt="MS TECH Store Interior"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm aspect-4/3 group">
-              <img
-                src="/office/20240203_134007.webp"
-                alt="MS TECH Diagnostic Bench"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm aspect-4/3 group">
-              <img
-                src="/office/20240215_201650.webp"
-                alt="MS TECH Hardware Spares"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm aspect-4/3 group">
-              <img
-                src="/office/20240215_201728.webp"
-                alt="MS TECH Work Station"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-          </div>
+          <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-4" staggerDelay={0.08}>
+            <StaggerItem>
+              <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm aspect-4/3 group">
+                <img
+                  src="/office/20240203_133946.webp"
+                  alt="MS TECH Store Interior"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </StaggerItem>
+            <StaggerItem>
+              <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm aspect-4/3 group">
+                <img
+                  src="/office/20240203_134007.webp"
+                  alt="MS TECH Diagnostic Bench"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </StaggerItem>
+            <StaggerItem>
+              <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm aspect-4/3 group">
+                <img
+                  src="/office/20240215_201650.webp"
+                  alt="MS TECH Hardware Spares"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </StaggerItem>
+            <StaggerItem>
+              <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm aspect-4/3 group">
+                <img
+                  src="/office/20240215_201728.webp"
+                  alt="MS TECH Work Station"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </StaggerItem>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* Our Approach Section */}
       <section className="py-16 sm:py-20 bg-slate-50 border-t border-slate-100">
         <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-10">
-          <div className="text-center max-w-2xl mx-auto mb-12">
+          <FadeUp className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-xs font-bold uppercase tracking-wider text-[#0875D1]">How We Work</span>
             <h2 className="text-3xl font-black text-[#042B55] mt-1">Our Service Approach</h2>
             <div className="h-1 w-12 bg-[#0875D1] rounded-full mx-auto mt-3" />
-          </div>
+          </FadeUp>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-xs flex flex-col">
-              <div className="w-12 h-12 rounded-xl bg-[#EAF6FF] text-[#0875D1] font-black text-xl flex items-center justify-center mb-4">
-                01
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8" staggerDelay={0.1}>
+            <StaggerItem>
+              <div className="h-full bg-white rounded-2xl p-6 border border-slate-200/80 shadow-xs flex flex-col">
+                <div className="w-12 h-12 rounded-xl bg-[#EAF6FF] text-[#0875D1] font-black text-xl flex items-center justify-center mb-4">
+                  01
+                </div>
+                <h3 className="text-lg font-bold text-[#042B55] mb-2">Honest Diagnostic Inspection</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  Before initiating any service, we inspect your computer, printer, or security camera to identify root causes. You receive clear details on what parts need attention.
+                </p>
               </div>
-              <h3 className="text-lg font-bold text-[#042B55] mb-2">Honest Diagnostic Inspection</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Before initiating any service, we inspect your computer, printer, or security camera to identify root causes. You receive clear details on what parts need attention.
-              </p>
-            </div>
+            </StaggerItem>
 
-            <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-xs flex flex-col">
-              <div className="w-12 h-12 rounded-xl bg-[#EAF6FF] text-[#0875D1] font-black text-xl flex items-center justify-center mb-4">
-                02
+            <StaggerItem>
+              <div className="h-full bg-white rounded-2xl p-6 border border-slate-200/80 shadow-xs flex flex-col">
+                <div className="w-12 h-12 rounded-xl bg-[#EAF6FF] text-[#0875D1] font-black text-xl flex items-center justify-center mb-4">
+                  02
+                </div>
+                <h3 className="text-lg font-bold text-[#042B55] mb-2">Verified Spares & Precision Repair</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  We only install verified genuine replacement components, certified SSDs, tested RAM modules, and original accessories to safeguard performance and lifespan.
+                </p>
               </div>
-              <h3 className="text-lg font-bold text-[#042B55] mb-2">Verified Spares & Precision Repair</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                We only install verified genuine replacement components, certified SSDs, tested RAM modules, and original accessories to safeguard performance and lifespan.
-              </p>
-            </div>
+            </StaggerItem>
 
-            <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-xs flex flex-col">
-              <div className="w-12 h-12 rounded-xl bg-[#EAF6FF] text-[#0875D1] font-black text-xl flex items-center justify-center mb-4">
-                03
+            <StaggerItem>
+              <div className="h-full bg-white rounded-2xl p-6 border border-slate-200/80 shadow-xs flex flex-col">
+                <div className="w-12 h-12 rounded-xl bg-[#EAF6FF] text-[#0875D1] font-black text-xl flex items-center justify-center mb-4">
+                  03
+                </div>
+                <h3 className="text-lg font-bold text-[#042B55] mb-2">Dependable Post-Service Care</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  We verify stability before handoff. If you need driver guidance or follow-up tips, our phone and WhatsApp support is always ready to assist.
+                </p>
               </div>
-              <h3 className="text-lg font-bold text-[#042B55] mb-2">Dependable Post-Service Care</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                We verify stability before handoff. If you need driver guidance or follow-up tips, our phone and WhatsApp support is always ready to assist.
-              </p>
-            </div>
-          </div>
+            </StaggerItem>
+          </StaggerContainer>
         </div>
       </section>
 

@@ -19,6 +19,7 @@ import {
 import PageHero from "../components/common/PageHero";
 import Button from "../components/common/Button";
 import { SERVICES_DATA, BUSINESS_INFO } from "../data/siteData";
+import { FadeUp, ScaleIn } from "../components/common/ScrollAnimation";
 
 const iconMap = {
   Laptop: Laptop,
@@ -65,15 +66,15 @@ export default function ServiceDetails() {
             {/* Left Main Content (8 cols) */}
             <div className="lg:col-span-8 space-y-10">
               
-              {/* Feature Hero Image */}
-              <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-100 bg-slate-100 h-72 sm:h-96 relative">
+              {/* Feature Hero Image with ScaleIn */}
+              <ScaleIn className="rounded-3xl overflow-hidden shadow-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-slate-100 h-72 sm:h-96 relative flex items-center justify-center p-4">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#042B55]/70 via-transparent to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6 text-white flex items-center justify-between">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#042B55]/70 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-6 left-6 right-6 text-white flex items-center justify-between z-10">
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center">
                       <IconComp className="w-6 h-6 text-white" />
@@ -84,18 +85,18 @@ export default function ServiceDetails() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </ScaleIn>
 
-              {/* Service Overview */}
-              <div>
+              {/* Service Overview with FadeUp */}
+              <FadeUp delay={0.1}>
                 <h3 className="text-2xl font-black text-[#042B55] mb-3">Service Overview</h3>
                 <p className="text-base text-slate-600 leading-relaxed">
                   {service.description}
                 </p>
-              </div>
+              </FadeUp>
 
-              {/* What We Provide (Features Checklist) */}
-              <div className="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200/80">
+              {/* What We Provide (Features Checklist) with FadeUp */}
+              <FadeUp delay={0.15} className="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200/80">
                 <h3 className="text-xl font-bold text-[#042B55] mb-4">
                   What We Provide
                 </h3>
@@ -107,11 +108,11 @@ export default function ServiceDetails() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </FadeUp>
 
-              {/* Common Requirements */}
+              {/* Common Requirements with FadeUp */}
               {service.commonRequirements && (
-                <div className="rounded-3xl p-6 sm:p-8 border border-slate-200/80">
+                <FadeUp delay={0.2} className="rounded-3xl p-6 sm:p-8 border border-slate-200/80">
                   <div className="flex items-center gap-2 mb-4">
                     <HelpCircle className="w-5 h-5 text-[#0875D1]" />
                     <h3 className="text-xl font-bold text-[#042B55]">Common Signs You Need This Service</h3>
@@ -124,11 +125,11 @@ export default function ServiceDetails() {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </FadeUp>
               )}
 
               {/* Bottom Quick Contact Strip for this Service */}
-              <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-[#042B55] to-[#0875D1] text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
+              <ScaleIn delay={0.2} className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-[#042B55] to-[#0875D1] text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
                 <div>
                   <span className="text-xs uppercase font-bold text-[#7DD3FC] tracking-wider">Ready to repair or buy?</span>
                   <h4 className="text-xl font-bold mt-1">Need {service.title}?</h4>
@@ -156,7 +157,7 @@ export default function ServiceDetails() {
                     WhatsApp
                   </Button>
                 </div>
-              </div>
+              </ScaleIn>
 
             </div>
 
@@ -164,7 +165,7 @@ export default function ServiceDetails() {
             <div className="lg:col-span-4 space-y-6">
               
               {/* Highlights Widget */}
-              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200/80">
+              <FadeUp delay={0.15} className="bg-slate-50 rounded-2xl p-6 border border-slate-200/80">
                 <h4 className="text-base font-bold text-[#042B55] mb-4 pb-2 border-b border-slate-200">
                   Service Key Metrics
                 </h4>
@@ -180,10 +181,10 @@ export default function ServiceDetails() {
                     <span className="text-sm font-semibold text-slate-800">All Over Tamil Nadu</span>
                   </div>
                 </div>
-              </div>
+              </FadeUp>
 
               {/* Store Walk-in Box */}
-              <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-xs">
+              <FadeUp delay={0.2} className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-xs">
                 <h4 className="text-base font-bold text-[#042B55] mb-2">Visit Rasipuram Center</h4>
                 <p className="text-xs text-slate-600 leading-relaxed mb-4">
                   {BUSINESS_INFO.address.line1} {BUSINESS_INFO.address.line2} {BUSINESS_INFO.address.landmark} {BUSINESS_INFO.address.city}
@@ -204,10 +205,10 @@ export default function ServiceDetails() {
                     Book Diagnostic Service
                   </Link>
                 </div>
-              </div>
+              </FadeUp>
 
               {/* Related Services Links */}
-              <div className="bg-white rounded-2xl p-6 border border-slate-200/80">
+              <FadeUp delay={0.25} className="bg-white rounded-2xl p-6 border border-slate-200/80">
                 <h4 className="text-base font-bold text-[#042B55] mb-3">Related Services</h4>
                 <div className="space-y-2">
                   {relatedServices.map((rel) => (
@@ -221,7 +222,7 @@ export default function ServiceDetails() {
                     </Link>
                   ))}
                 </div>
-              </div>
+              </FadeUp>
 
             </div>
 

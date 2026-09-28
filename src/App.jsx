@@ -27,7 +27,7 @@ export default function App() {
       <Navbar />
 
       {/* Main Multi-page Route Content */}
-      <div className="flex-1">
+      <div className="flex-1 pb-16 lg:pb-0">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

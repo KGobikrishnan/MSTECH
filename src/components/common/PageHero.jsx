@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ChevronRight, Home } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function PageHero({
   title,
@@ -17,7 +18,13 @@ export default function PageHero({
 
       <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         {/* Breadcrumbs */}
-        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs sm:text-sm text-slate-300 mb-4">
+        <motion.nav
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          aria-label="Breadcrumb"
+          className="flex items-center gap-2 text-xs sm:text-sm text-slate-300 mb-4"
+        >
           <Link to="/" className="inline-flex items-center gap-1 hover:text-white transition-colors">
             <Home className="w-3.5 h-3.5" />
             <span>Home</span>
@@ -34,24 +41,39 @@ export default function PageHero({
               )}
             </React.Fragment>
           ))}
-        </nav>
+        </motion.nav>
 
         {/* Badge */}
         {badge && (
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#7DD3FC] text-xs font-bold tracking-wider uppercase mb-3">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#7DD3FC] text-xs font-bold tracking-wider uppercase mb-3"
+          >
             <span className="w-1.5 h-1.5 rounded-full bg-[#16B95F]" />
             {badge}
-          </div>
+          </motion.div>
         )}
 
         {/* Title & Subtitle */}
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white max-w-3xl leading-tight">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.15 }}
+          className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white max-w-3xl leading-tight"
+        >
           {title}
-        </h1>
+        </motion.h1>
         {subtitle && (
-          <p className="mt-4 text-base sm:text-lg text-slate-200 max-w-2xl font-normal leading-relaxed">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+            className="mt-4 text-base sm:text-lg text-slate-200 max-w-2xl font-normal leading-relaxed"
+          >
             {subtitle}
-          </p>
+          </motion.p>
         )}
       </div>
     </div>

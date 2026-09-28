@@ -127,29 +127,29 @@ Please provide quick estimate & availability.`;
             </div>
 
             {/* Giant Modern Headline */}
-            <h1 className="text-3xl sm:text-5xl xl:text-6xl font-black tracking-tight text-[#042B55] leading-[1.12]">
+            <h1 className="text-2xl xs:text-3xl sm:text-5xl xl:text-6xl font-black tracking-tight text-[#042B55] leading-[1.15]">
               LAPTOP <span className="text-[#0875D1]">•</span> DESKTOP <br />
               <span className="text-[#0875D1]">PRINTER</span> <span className="text-[#042B55]">•</span> CCTV
             </h1>
 
             {/* Tagline Row */}
-            <div className="mt-3.5 flex flex-wrap items-center gap-2 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-slate-600">
-              <span className="px-3 py-1 rounded-lg bg-white border border-slate-200/90 shadow-2xs">Sales</span>
+            <div className="mt-3.5 flex flex-wrap items-center gap-1.5 sm:gap-2 text-[11px] sm:text-sm font-extrabold uppercase tracking-wider text-slate-600">
+              <span className="px-2.5 py-1 rounded-lg bg-white border border-slate-200/90 shadow-2xs">Sales</span>
               <span className="text-[#0875D1]">•</span>
-              <span className="px-3 py-1 rounded-lg bg-white border border-slate-200/90 shadow-2xs">Service</span>
+              <span className="px-2.5 py-1 rounded-lg bg-white border border-slate-200/90 shadow-2xs">Service</span>
               <span className="text-[#0875D1]">•</span>
-              <span className="px-3 py-1 rounded-lg bg-white border border-slate-200/90 shadow-2xs">Installation</span>
+              <span className="px-2.5 py-1 rounded-lg bg-white border border-slate-200/90 shadow-2xs">Installation</span>
               <span className="text-[#0875D1]">•</span>
-              <span className="px-3 py-1 rounded-lg bg-white border border-slate-200/90 shadow-2xs">Support</span>
+              <span className="px-2.5 py-1 rounded-lg bg-white border border-slate-200/90 shadow-2xs">Support</span>
             </div>
 
             {/* Bilingual Tamil Feature Card */}
-            <div className="mt-6 p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/90 shadow-md max-w-xl w-full relative overflow-hidden">
+            <div className="mt-5 sm:mt-6 p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/90 shadow-md max-w-xl w-full relative overflow-hidden">
               <div className="absolute top-0 left-0 w-1.5 h-full bg-[#0875D1]" />
               <p className="text-xs sm:text-sm font-semibold text-slate-800 leading-relaxed font-tamil pl-2">
                 {BUSINESS_INFO.tamilHeadline}
               </p>
-              <div className="mt-3 pl-2 pt-2.5 border-t border-slate-100 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-xs text-slate-600">
+              <div className="mt-3 pl-2 pt-2.5 border-t border-slate-100 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[11px] sm:text-xs text-slate-600">
                 <span className="flex items-center gap-1.5 text-slate-800 font-semibold">
                   <Check className="w-3.5 h-3.5 text-[#10B981]" /> 100% Genuine Spares
                 </span>
@@ -163,36 +163,38 @@ Please provide quick estimate & availability.`;
             </div>
 
             {/* Conversion Actions */}
-            <div className="mt-8 flex flex-wrap items-center gap-3.5 w-full sm:w-auto">
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-2.5 sm:gap-3.5 w-full sm:w-auto">
               <Link
                 to="/services"
-                className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#042B55] to-[#0875D1] hover:from-[#0875D1] hover:to-[#042B55] text-white font-bold text-sm shadow-lg shadow-[#0875D1]/25 flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 cursor-pointer"
+                className="w-full sm:w-auto px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl bg-gradient-to-r from-[#042B55] to-[#0875D1] hover:from-[#0875D1] hover:to-[#042B55] text-white font-bold text-xs sm:text-sm shadow-lg shadow-[#0875D1]/25 flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 cursor-pointer text-center"
               >
                 <span>Explore All Services</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
 
-              <a
-                href={`tel:${BUSINESS_INFO.phone}`}
-                className="px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 border border-slate-300 text-[#042B55] font-bold text-sm flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 shadow-xs"
-              >
-                <Phone className="w-4 h-4 text-[#0875D1] fill-current" />
-                <span>Call Store</span>
-              </a>
+              <div className="grid grid-cols-2 sm:flex sm:items-center gap-2.5 w-full sm:w-auto">
+                <a
+                  href={`tel:${BUSINESS_INFO.phone}`}
+                  className="px-4 sm:px-6 py-3 sm:py-3.5 rounded-xl bg-white hover:bg-slate-50 border border-slate-300 text-[#042B55] font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 shadow-xs"
+                >
+                  <Phone className="w-4 h-4 text-[#0875D1] fill-current" />
+                  <span>Call Store</span>
+                </a>
 
-              <a
-                href={BUSINESS_INFO.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3.5 rounded-xl bg-[#10B981] hover:bg-[#059669] text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-[#10B981]/25 transition-all hover:scale-105 active:scale-95"
-              >
-                <MessageCircle className="w-4 h-4 fill-current" />
-                <span>WhatsApp Us</span>
-              </a>
+                <a
+                  href={BUSINESS_INFO.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 sm:px-6 py-3 sm:py-3.5 rounded-xl bg-[#10B981] hover:bg-[#059669] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-[#10B981]/25 transition-all hover:scale-105 active:scale-95"
+                >
+                  <MessageCircle className="w-4 h-4 fill-current" />
+                  <span>WhatsApp</span>
+                </a>
+              </div>
             </div>
 
             {/* Store Location Landmark */}
-            <div className="mt-5 flex items-center gap-2 text-xs text-slate-500 font-medium">
+            <div className="mt-4 sm:mt-5 flex items-center gap-2 text-[11px] sm:text-xs text-slate-500 font-medium">
               <MapPin className="w-3.5 h-3.5 text-red-500 shrink-0" />
               <span>Opp. Kannan Department Store, New Bus Stand, Rasipuram</span>
             </div>
@@ -200,18 +202,18 @@ Please provide quick estimate & availability.`;
 
           {/* RIGHT 5-COLUMNS: Interactive Hardware Diagnostic Monitor */}
           <div className="lg:col-span-5">
-            <div className="relative rounded-3xl bg-white p-6 sm:p-7 border border-slate-200 shadow-xl overflow-hidden group">
+            <div className="relative rounded-3xl bg-white p-4 sm:p-7 border border-slate-200 shadow-xl overflow-hidden group">
               
               {/* Blue Accent Bar */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#042B55] via-[#0875D1] to-[#10B981]" />
 
               {/* 4 Category Switcher Tabs */}
-              <div className="grid grid-cols-4 gap-1.5 mb-6 p-1 rounded-xl bg-slate-100 border border-slate-200/80">
+              <div className="grid grid-cols-4 gap-1 sm:gap-1.5 mb-5 sm:mb-6 p-1 rounded-xl bg-slate-100 border border-slate-200/80">
                 {TECH_SOLUTIONS.map((item, idx) => (
                   <button
                     key={item.id}
                     onClick={() => setActiveTab(idx)}
-                    className={`py-2 px-1 rounded-lg text-[10px] sm:text-[11px] font-bold tracking-tight text-center transition-all cursor-pointer ${
+                    className={`py-2 px-0.5 sm:px-1 rounded-lg text-[9px] xs:text-[10px] sm:text-[11px] font-bold tracking-tight text-center transition-all cursor-pointer ${
                       activeTab === idx
                         ? "bg-[#0875D1] text-white shadow-md shadow-[#0875D1]/30 scale-[1.02]"
                         : "text-slate-600 hover:text-[#042B55] hover:bg-white"

@@ -1,6 +1,7 @@
 import React from "react";
 import { Award, ShieldCheck, Coins, HeartHandshake, Compass, Headphones, MapPin } from "lucide-react";
 import { WHY_CHOOSE_ITEMS } from "../../data/siteData";
+import { FadeUp, StaggerContainer, StaggerItem, ScaleIn } from "../common/ScrollAnimation";
 
 const iconMap = {
   Award: Award,
@@ -18,7 +19,7 @@ export default function WhyChooseUs() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           {/* Left Column: Big typography & Highlights */}
-          <div className="lg:col-span-5">
+          <FadeUp className="lg:col-span-5">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EAF6FF] border border-[#0875D1]/20 text-[#0875D1] text-xs font-bold uppercase tracking-wider mb-4">
               <ShieldCheck className="w-3.5 h-3.5 text-[#0875D1]" />
               Value & Reliability
@@ -36,7 +37,7 @@ export default function WhyChooseUs() {
             </p>
 
             {/* Tamil Nadu Partner Card */}
-            <div className="rounded-2xl p-6 bg-gradient-to-br from-[#042B55] to-[#0875D1] text-white shadow-xl shadow-[#042B55]/15 relative overflow-hidden">
+            <ScaleIn delay={0.2} className="rounded-2xl p-6 bg-gradient-to-br from-[#042B55] to-[#0875D1] text-white shadow-xl shadow-[#042B55]/15 relative overflow-hidden">
               <div className="absolute top-0 right-0 -mr-6 -mt-6 w-32 h-32 bg-white/10 rounded-full blur-xl" />
               <div className="flex items-start gap-4 relative z-10">
                 <div className="w-12 h-12 rounded-xl bg-white/15 border border-white/20 flex items-center justify-center shrink-0">
@@ -50,36 +51,35 @@ export default function WhyChooseUs() {
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
+            </ScaleIn>
+          </FadeUp>
 
-          {/* Right Column: Feature List Grid */}
+          {/* Right Column: Feature List Grid with Staggered Scroll Animation */}
           <div className="lg:col-span-7">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+            <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5" staggerDelay={0.08}>
               {WHY_CHOOSE_ITEMS.map((item, index) => {
                 const IconComp = iconMap[item.icon] || Award;
                 return (
-                  <div
-                    key={index}
-                    className="bg-white rounded-2xl p-5 border border-slate-200/90 hover:border-[#0875D1]/40 transition-all duration-300 group hover:shadow-lg hover:shadow-[#0875D1]/10"
-                  >
-                    <div className="flex items-start gap-3.5">
-                      <div className="w-11 h-11 rounded-xl bg-[#EAF6FF] text-[#0875D1] group-hover:bg-[#0875D1] group-hover:text-white transition-colors duration-300 flex items-center justify-center shrink-0">
-                        <IconComp className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <h4 className="text-base font-bold text-[#042B55] group-hover:text-[#0875D1] transition-colors">
-                          {item.title}
-                        </h4>
-                        <p className="text-xs sm:text-sm text-slate-600 mt-1.5 leading-relaxed">
-                          {item.description}
-                        </p>
+                  <StaggerItem key={index}>
+                    <div className="h-full bg-white rounded-2xl p-5 border border-slate-200/90 hover:border-[#0875D1]/40 transition-all duration-300 group hover:shadow-lg hover:shadow-[#0875D1]/10">
+                      <div className="flex items-start gap-3.5">
+                        <div className="w-11 h-11 rounded-xl bg-[#EAF6FF] text-[#0875D1] group-hover:bg-[#0875D1] group-hover:text-white transition-colors duration-300 flex items-center justify-center shrink-0">
+                          <IconComp className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <h4 className="text-base font-bold text-[#042B55] group-hover:text-[#0875D1] transition-colors">
+                            {item.title}
+                          </h4>
+                          <p className="text-xs sm:text-sm text-slate-600 mt-1.5 leading-relaxed">
+                            {item.description}
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </StaggerItem>
                 );
               })}
-            </div>
+            </StaggerContainer>
           </div>
 
         </div>

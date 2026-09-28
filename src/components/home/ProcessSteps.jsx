@@ -1,7 +1,7 @@
 import React from "react";
 import { Search, FileText, Cpu, CheckCircle2, ArrowRight, ShieldCheck, Clock, Award } from "lucide-react";
-import { Link } from "react-router-dom";
 import { BUSINESS_INFO } from "../../data/siteData";
+import { FadeUp, StaggerContainer, StaggerItem, ScaleIn } from "../common/ScrollAnimation";
 
 const STEPS = [
   {
@@ -46,8 +46,8 @@ export default function ProcessSteps() {
       <div className="absolute bottom-0 left-10 w-96 h-96 bg-[#E0F2FE]/60 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        {/* Section Header with Scroll Animation */}
+        <FadeUp className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EAF6FF] border border-[#0875D1]/20 text-[#0875D1] text-xs font-bold uppercase tracking-wider mb-4">
             <Clock className="w-3.5 h-3.5 text-[#0875D1]" />
             Clear, Transparent & Hassle-Free
@@ -58,57 +58,56 @@ export default function ProcessSteps() {
           <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
             Inspired by customer-first standards. No surprises, no unexplained charges — just straightforward, reliable service.
           </p>
-        </div>
+        </FadeUp>
 
-        {/* 4-Step Process Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+        {/* 4-Step Process Grid with Staggered Scroll Animation */}
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative" staggerDelay={0.12}>
           {STEPS.map((item, idx) => {
             const Icon = item.icon;
             return (
-              <div
-                key={idx}
-                className="group relative rounded-2xl p-6 bg-slate-50 hover:bg-white border border-slate-200/90 hover:border-[#0875D1]/40 transition-all duration-300 hover:shadow-xl hover:shadow-[#0875D1]/10 flex flex-col justify-between"
-              >
-                {/* Step number badge */}
-                <div className="flex items-center justify-between mb-5">
-                  <span className="text-3xl font-black text-slate-300 group-hover:text-[#0875D1] transition-colors font-mono">
-                    {item.step}
-                  </span>
-                  <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-[#EAF6FF] text-[#0875D1] border border-[#0875D1]/20">
-                    {item.highlight}
-                  </span>
-                </div>
+              <StaggerItem key={idx}>
+                <div className="h-full group relative rounded-2xl p-6 bg-slate-50 hover:bg-white border border-slate-200/90 hover:border-[#0875D1]/40 transition-all duration-300 hover:shadow-xl hover:shadow-[#0875D1]/10 flex flex-col justify-between">
+                  {/* Step number badge */}
+                  <div>
+                    <div className="flex items-center justify-between mb-5">
+                      <span className="text-3xl font-black text-slate-300 group-hover:text-[#0875D1] transition-colors font-mono">
+                        {item.step}
+                      </span>
+                      <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-[#EAF6FF] text-[#0875D1] border border-[#0875D1]/20">
+                        {item.highlight}
+                      </span>
+                    </div>
 
-                {/* Icon */}
-                <div className="w-12 h-12 rounded-xl bg-[#EAF6FF] border border-[#0875D1]/20 text-[#0875D1] flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-[#0875D1] group-hover:text-white transition-all shadow-xs">
-                  <Icon className="w-6 h-6" />
-                </div>
+                    {/* Icon */}
+                    <div className="w-12 h-12 rounded-xl bg-[#EAF6FF] border border-[#0875D1]/20 text-[#0875D1] flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-[#0875D1] group-hover:text-white transition-all shadow-xs">
+                      <Icon className="w-6 h-6" />
+                    </div>
 
-                {/* Content */}
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-[#042B55] group-hover:text-[#0875D1] transition-colors">
-                    {item.title}
-                  </h3>
-                  <span className="text-xs text-[#0875D1] font-tamil font-semibold block mt-0.5 mb-2.5">
-                    {item.subtitle}
-                  </span>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
+                    {/* Content */}
+                    <h3 className="text-lg font-bold text-[#042B55] group-hover:text-[#0875D1] transition-colors">
+                      {item.title}
+                    </h3>
+                    <span className="text-xs text-[#0875D1] font-tamil font-semibold block mt-0.5 mb-2.5">
+                      {item.subtitle}
+                    </span>
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
 
-                {/* Bottom line accent */}
-                <div className="mt-5 pt-4 border-t border-slate-200 flex items-center text-xs font-semibold text-slate-500 group-hover:text-[#0875D1] transition-colors">
-                  <span>Guaranteed Standards</span>
-                  <ShieldCheck className="w-4 h-4 ml-auto text-[#10B981]" />
+                  {/* Bottom line accent */}
+                  <div className="mt-5 pt-4 border-t border-slate-200 flex items-center text-xs font-semibold text-slate-500 group-hover:text-[#0875D1] transition-colors">
+                    <span>Guaranteed Standards</span>
+                    <ShieldCheck className="w-4 h-4 ml-auto text-[#10B981]" />
+                  </div>
                 </div>
-              </div>
+              </StaggerItem>
             );
           })}
-        </div>
+        </StaggerContainer>
 
-        {/* Assurance Banner */}
-        <div className="mt-12 rounded-2xl bg-gradient-to-r from-[#042B55] to-[#0875D1] text-white p-6 sm:p-7 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl shadow-[#042B55]/15">
+        {/* Assurance Banner with Scroll Scale Effect */}
+        <ScaleIn delay={0.2} className="mt-12 rounded-2xl bg-gradient-to-r from-[#042B55] to-[#0875D1] text-white p-6 sm:p-7 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl shadow-[#042B55]/15">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-xl bg-white/15 border border-white/20 text-white flex items-center justify-center shrink-0">
               <Award className="w-6 h-6 text-[#7DD3FC]" />
@@ -132,7 +131,7 @@ export default function ProcessSteps() {
             <span>Book Diagnosis</span>
             <ArrowRight className="w-4 h-4" />
           </a>
-        </div>
+        </ScaleIn>
       </div>
     </section>
   );

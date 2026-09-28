@@ -1,42 +1,114 @@
 import React from "react";
-import { Phone, MessageCircle, MapPin } from "lucide-react";
+import { NavLink } from "react-router-dom";
+import { Home, Users, Image as GalleryIcon, PhoneCall, MessageCircle } from "lucide-react";
 import { BUSINESS_INFO } from "../../data/siteData";
+
+const NAV_ITEMS = [
+  {
+    label: "Home",
+    to: "/",
+    icon: Home,
+    end: true
+  },
+  {
+    label: "About Us",
+    to: "/about",
+    icon: Users
+  },
+  {
+    label: "Gallery",
+    to: "/gallery",
+    icon: GalleryIcon
+  },
+  {
+    label: "Contact",
+    to: "/contact",
+    icon: PhoneCall
+  }
+];
 
 export default function MobileActionBar() {
   return (
-    <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 px-3 py-2 shadow-2xl safe-area-bottom">
-      <div className="grid grid-cols-3 gap-2">
-        {/* Call Button */}
-        <a
-          href={`tel:${BUSINESS_INFO.phone}`}
-          className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-gradient-to-r from-[#0875D1] to-[#042B55] text-white shadow-sm active:scale-95 transition-transform"
+    <nav
+      aria-label="Mobile Navigation"
+      className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-t border-slate-200/90 shadow-[0_-4px_25px_rgba(0,0,0,0.08)] px-2 py-1.5 safe-area-bottom"
+    >
+      <div className="grid grid-cols-5 items-center justify-between gap-1 max-w-md mx-auto">
+        {/* 1. Home */}
+        <NavLink
+          to="/"
+          end
+          className={({ isActive }) =>
+            `flex flex-col items-center justify-center py-1.5 px-1 rounded-xl transition-all duration-200 ${
+              isActive
+                ? "text-[#0875D1] font-extrabold bg-[#EAF6FF]"
+                : "text-slate-500 hover:text-slate-800 font-medium"
+            }`
+          }
         >
-          <Phone className="w-4 h-4 fill-current mb-0.5" />
-          <span className="text-[11px] font-bold">Call Now</span>
-        </a>
+          <Home className="w-5 h-5 mb-0.5" />
+          <span className="text-[10px] tracking-tight">Home</span>
+        </NavLink>
 
-        {/* WhatsApp Button */}
-        <a
-          href={BUSINESS_INFO.whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-[#16B95F] text-white shadow-sm active:scale-95 transition-transform"
+        {/* 2. About Us */}
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            `flex flex-col items-center justify-center py-1.5 px-1 rounded-xl transition-all duration-200 ${
+              isActive
+                ? "text-[#0875D1] font-extrabold bg-[#EAF6FF]"
+                : "text-slate-500 hover:text-slate-800 font-medium"
+            }`
+          }
         >
-          <MessageCircle className="w-4 h-4 fill-current mb-0.5" />
-          <span className="text-[11px] font-bold">WhatsApp</span>
-        </a>
+          <Users className="w-5 h-5 mb-0.5" />
+          <span className="text-[10px] tracking-tight">About</span>
+        </NavLink>
 
-        {/* Map Location */}
-        <a
-          href={BUSINESS_INFO.googleMapsUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 shadow-sm active:scale-95 transition-transform"
+        {/* Center Quick WhatsApp Action */}
+        <div className="flex flex-col items-center justify-center -mt-4">
+          <a
+            href={BUSINESS_INFO.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-12 h-12 rounded-full bg-[#10B981] hover:bg-[#059669] text-white flex items-center justify-center shadow-lg shadow-[#10B981]/30 active:scale-90 transition-transform border-2 border-white"
+            aria-label="Chat on WhatsApp"
+          >
+            <MessageCircle className="w-6 h-6 fill-current" />
+          </a>
+          <span className="text-[9px] font-bold text-slate-500 mt-0.5">Chat</span>
+        </div>
+
+        {/* 4. Gallery */}
+        <NavLink
+          to="/gallery"
+          className={({ isActive }) =>
+            `flex flex-col items-center justify-center py-1.5 px-1 rounded-xl transition-all duration-200 ${
+              isActive
+                ? "text-[#0875D1] font-extrabold bg-[#EAF6FF]"
+                : "text-slate-500 hover:text-slate-800 font-medium"
+            }`
+          }
         >
-          <MapPin className="w-4 h-4 text-red-500 mb-0.5" />
-          <span className="text-[11px] font-bold">Location</span>
-        </a>
+          <GalleryIcon className="w-5 h-5 mb-0.5" />
+          <span className="text-[10px] tracking-tight">Gallery</span>
+        </NavLink>
+
+        {/* 5. Contact */}
+        <NavLink
+          to="/contact"
+          className={({ isActive }) =>
+            `flex flex-col items-center justify-center py-1.5 px-1 rounded-xl transition-all duration-200 ${
+              isActive
+                ? "text-[#0875D1] font-extrabold bg-[#EAF6FF]"
+                : "text-slate-500 hover:text-slate-800 font-medium"
+            }`
+          }
+        >
+          <PhoneCall className="w-5 h-5 mb-0.5" />
+          <span className="text-[10px] tracking-tight">Contact</span>
+        </NavLink>
       </div>
-    </div>
+    </nav>
   );
 }

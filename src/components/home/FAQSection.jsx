@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ChevronDown, HelpCircle, Phone, MessageCircle } from "lucide-react";
 import { BUSINESS_INFO } from "../../data/siteData";
+import { FadeUp, StaggerContainer, StaggerItem } from "../common/ScrollAnimation";
 
 const FAQS = [
   {
@@ -48,7 +49,7 @@ export default function FAQSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Column: Summary & Direct Contact */}
           <div className="lg:col-span-4">
-            <div className="sticky top-28">
+            <FadeUp className="sticky top-28">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EAF6FF] border border-[#0875D1]/20 text-[#0875D1] text-xs font-bold uppercase tracking-wider mb-4">
                 <HelpCircle className="w-3.5 h-3.5 text-[#0875D1]" />
                 Frequently Asked Questions
@@ -90,54 +91,57 @@ export default function FAQSection() {
                   </a>
                 </div>
               </div>
-            </div>
+            </FadeUp>
           </div>
 
-          {/* Right Column: Accordion list */}
-          <div className="lg:col-span-8 space-y-4">
-            {FAQS.map((faq, idx) => {
-              const isOpen = openIndex === idx;
-              return (
-                <div
-                  key={idx}
-                  className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
-                    isOpen
-                      ? "bg-[#EAF6FF]/40 border-[#0875D1]/50 shadow-md shadow-[#0875D1]/5"
-                      : "bg-white border-slate-200/90 hover:border-slate-300"
-                  }`}
-                >
-                  <button
-                    onClick={() => toggle(idx)}
-                    className="w-full px-6 py-5 flex items-center justify-between text-left gap-4 transition-colors cursor-pointer"
-                    aria-expanded={isOpen}
-                  >
-                    <div>
-                      <span className="text-base sm:text-lg font-bold text-[#042B55] block">
-                        {faq.q}
-                      </span>
-                      <span className="text-xs text-[#0875D1] font-tamil font-semibold block mt-1">
-                        {faq.qTamil}
-                      </span>
-                    </div>
+          {/* Right Column: Accordion list with Staggered Scroll Animation */}
+          <div className="lg:col-span-8">
+            <StaggerContainer className="space-y-4" staggerDelay={0.08}>
+              {FAQS.map((faq, idx) => {
+                const isOpen = openIndex === idx;
+                return (
+                  <StaggerItem key={idx}>
                     <div
-                      className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 border transition-transform duration-300 ${
+                      className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                         isOpen
-                          ? "bg-[#0875D1] text-white border-[#0875D1] rotate-180"
-                          : "bg-slate-100 text-slate-500 border-slate-200"
+                          ? "bg-[#EAF6FF]/40 border-[#0875D1]/50 shadow-md shadow-[#0875D1]/5"
+                          : "bg-white border-slate-200/90 hover:border-slate-300"
                       }`}
                     >
-                      <ChevronDown className="w-4 h-4" />
-                    </div>
-                  </button>
+                      <button
+                        onClick={() => toggle(idx)}
+                        className="w-full px-6 py-5 flex items-center justify-between text-left gap-4 transition-colors cursor-pointer"
+                        aria-expanded={isOpen}
+                      >
+                        <div>
+                          <span className="text-base sm:text-lg font-bold text-[#042B55] block">
+                            {faq.q}
+                          </span>
+                          <span className="text-xs text-[#0875D1] font-tamil font-semibold block mt-1">
+                            {faq.qTamil}
+                          </span>
+                        </div>
+                        <div
+                          className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 border transition-transform duration-300 ${
+                            isOpen
+                              ? "bg-[#0875D1] text-white border-[#0875D1] rotate-180"
+                              : "bg-slate-100 text-slate-500 border-slate-200"
+                          }`}
+                        >
+                          <ChevronDown className="w-4 h-4" />
+                        </div>
+                      </button>
 
-                  {isOpen && (
-                    <div className="px-6 pb-5 pt-1 text-sm text-slate-700 leading-relaxed border-t border-slate-200/60">
-                      {faq.a}
+                      {isOpen && (
+                        <div className="px-6 pb-5 pt-1 text-sm text-slate-700 leading-relaxed border-t border-slate-200/60">
+                          {faq.a}
+                        </div>
+                      )}
                     </div>
-                  )}
-                </div>
-              );
-            })}
+                  </StaggerItem>
+                );
+              })}
+            </StaggerContainer>
           </div>
         </div>
       </div>
