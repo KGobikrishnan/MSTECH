@@ -17,15 +17,32 @@ export default function ContactForm() {
 
   const onSubmit = (data) => {
     setIsSubmitting(true);
-    // Simulate brief processing
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-      toast.success("Enquiry Received!", {
-        description: "Thank you for reaching out to MS TECH. We will contact you shortly."
-      });
-      reset();
-    }, 600);
+
+    // Format WhatsApp message starting with "Hello MS Tech"
+    const whatsappText = `Hello MS Tech,
+
+I would like to submit a service enquiry:
+
+*Name:* ${data.name || "N/A"}
+*Phone:* ${data.phone || "N/A"}
+${data.email ? `*Email:* ${data.email}\n` : ""}*Service Required:* ${data.service || "General Technical Support"}
+
+*Message / Issue:*
+${data.message}
+
+Please get back to me with the details.`;
+
+    const whatsappUrl = `https://wa.me/919843777146?text=${encodeURIComponent(whatsappText)}`;
+
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+
+    setIsSubmitting(false);
+    setSubmitted(true);
+    toast.success("Enquiry Prepared!", {
+      description: "WhatsApp chat has been opened with your enquiry details."
+    });
+    reset();
   };
 
   return (
@@ -34,7 +51,7 @@ export default function ContactForm() {
         <span className="text-xs font-bold uppercase tracking-wider text-[#0875D1]">Quick Enquiry</span>
         <h3 className="text-2xl font-black text-[#042B55] mt-1">Send Us a Message</h3>
         <p className="text-xs sm:text-sm text-slate-500 mt-1">
-          Fill out your requirement below, or send us a quick message directly on WhatsApp.
+          Fill out your requirement below to directly start a WhatsApp conversation with MS TECH (+91 9843777146).
         </p>
       </div>
 
@@ -165,14 +182,14 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#0875D1] to-[#042B55] hover:from-[#1687E8] hover:to-[#063B73] text-white font-bold text-sm shadow-md shadow-[#0875D1]/20 flex items-center justify-center gap-2 transition-all active:scale-[0.98] disabled:opacity-60 cursor-pointer"
+            className="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#10B981] via-[#059669] to-[#042B55] hover:opacity-95 text-white font-bold text-sm shadow-md shadow-[#10B981]/25 flex items-center justify-center gap-2 transition-all active:scale-[0.98] disabled:opacity-60 cursor-pointer"
           >
             {isSubmitting ? (
-              <span>Sending Enquiry...</span>
+              <span>Preparing WhatsApp Chat...</span>
             ) : (
               <>
-                <Send className="w-4 h-4" />
-                <span>Send Enquiry →</span>
+                <MessageSquare className="w-4 h-4 fill-current" />
+                <span>Send Enquiry via WhatsApp (+91 9843777146) →</span>
               </>
             )}
           </button>
