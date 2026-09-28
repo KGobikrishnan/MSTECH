@@ -1,7 +1,7 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { Search, FileText, Cpu, CheckCircle2, ArrowRight, ShieldCheck, Clock, Award } from "lucide-react";
 import { BUSINESS_INFO } from "../../data/siteData";
-import { FadeUp, StaggerContainer, StaggerItem, ScaleIn } from "../common/ScrollAnimation";
 
 const STEPS = [
   {
@@ -46,26 +46,53 @@ export default function ProcessSteps() {
       <div className="absolute bottom-0 left-10 w-96 h-96 bg-[#E0F2FE]/60 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
-        {/* Section Header with Scroll Animation */}
-        <FadeUp className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EAF6FF] border border-[#0875D1]/20 text-[#0875D1] text-xs font-bold uppercase tracking-wider mb-4">
+        {/* Section Header with Staggered Scroll Animation */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.05 }}
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EAF6FF] border border-[#0875D1]/20 text-[#0875D1] text-xs font-bold uppercase tracking-wider mb-4"
+          >
             <Clock className="w-3.5 h-3.5 text-[#0875D1]" />
             Clear, Transparent & Hassle-Free
-          </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#042B55] tracking-tight">
+          </motion.div>
+          
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.55, delay: 0.12 }}
+            className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#042B55] tracking-tight"
+          >
             How Our <span className="text-[#0875D1]">Repair Process</span> Works
-          </h2>
-          <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
+          </motion.h2>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto"
+          >
             Inspired by customer-first standards. No surprises, no unexplained charges — just straightforward, reliable service.
-          </p>
-        </FadeUp>
+          </motion.p>
+        </div>
 
-        {/* 4-Step Process Grid: 2-Column Grid on Mobile */}
-        <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 relative" staggerDelay={0.1}>
+        {/* 4-Step Process Grid: 2-Column Grid on Mobile with Sequential Scroll Entrance */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 relative">
           {STEPS.map((item, idx) => {
             const Icon = item.icon;
             return (
-              <StaggerItem key={idx}>
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.15 + idx * 0.09 }}
+                className="h-full"
+              >
                 <div className="h-full group relative rounded-2xl p-3.5 sm:p-6 bg-slate-50 hover:bg-white border border-slate-200/90 hover:border-[#0875D1]/40 transition-all duration-300 hover:shadow-xl hover:shadow-[#0875D1]/10 flex flex-col justify-between">
                   {/* Step number badge */}
                   <div>
@@ -101,13 +128,19 @@ export default function ProcessSteps() {
                     <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 ml-auto text-[#10B981] shrink-0" />
                   </div>
                 </div>
-              </StaggerItem>
+              </motion.div>
             );
           })}
-        </StaggerContainer>
+        </div>
 
         {/* Assurance Banner with Scroll Scale Effect */}
-        <ScaleIn delay={0.2} className="mt-12 rounded-2xl bg-gradient-to-r from-[#042B55] to-[#0875D1] text-white p-6 sm:p-7 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl shadow-[#042B55]/15">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.96, y: 20 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.55, delay: 0.25 }}
+          className="mt-12 rounded-2xl bg-gradient-to-r from-[#042B55] to-[#0875D1] text-white p-6 sm:p-7 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl shadow-[#042B55]/15"
+        >
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-xl bg-white/15 border border-white/20 text-white flex items-center justify-center shrink-0">
               <Award className="w-6 h-6 text-[#7DD3FC]" />
@@ -126,12 +159,12 @@ export default function ProcessSteps() {
             href={BUSINESS_INFO.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-slate-50 text-[#042B55] hover:text-[#0875D1] text-sm font-extrabold transition-all shadow-md shrink-0"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-slate-50 text-[#042B55] hover:text-[#0875D1] text-sm font-extrabold transition-all shadow-md shrink-0 hover:scale-105 active:scale-95"
           >
             <span>Book Diagnosis</span>
             <ArrowRight className="w-4 h-4" />
           </a>
-        </ScaleIn>
+        </motion.div>
       </div>
     </section>
   );
