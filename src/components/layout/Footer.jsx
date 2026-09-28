@@ -12,34 +12,34 @@ export default function Footer() {
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#0875D1]/15 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 pb-12 border-b border-white/10">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-8 pb-10 border-b border-white/10">
           
-          {/* Column 1: Brand & Bio */}
-          <div className="space-y-4">
+          {/* Column 1: Brand & Bio (Spans 2 cols on mobile, 1 col on lg) */}
+          <div className="col-span-2 md:col-span-2 lg:col-span-1 space-y-3.5">
             <Logo variant="dark" />
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pt-2">
-              Your comprehensive technology partner in Rasipuram and across Tamil Nadu. Dedicated to trusted sales, chip-level diagnostics, laser printer repairs, and enterprise CCTV security installations.
+            <p className="text-xs text-slate-300 leading-relaxed pt-1 max-w-lg">
+              Your comprehensive technology partner in Rasipuram and across Tamil Nadu. Dedicated to sales, chip-level repairs, printer servicing, and CCTV setups.
             </p>
             
-            <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-              <span className="text-[11px] font-bold text-[#7DD3FC] uppercase tracking-wider block mb-0.5">
+            <div className="p-3 rounded-xl bg-white/5 border border-white/10 max-w-md">
+              <span className="text-[10px] font-bold text-[#7DD3FC] uppercase tracking-wider block mb-0.5">
                 Official Motto
               </span>
               <p className="text-xs text-slate-200 italic">
                 "Technology Today, A Better Tomorrow."
               </p>
-              <p className="text-[11px] text-[#7DD3FC] font-tamil mt-1">
+              <p className="text-[11px] text-[#7DD3FC] font-tamil mt-0.5">
                 இன்றைய தொழில்நுட்பம், நாளைய சிறப்பான எதிர்காலம்.
               </p>
             </div>
 
             {/* Social Icons */}
-            <div className="flex items-center gap-2.5 pt-1">
+            <div className="flex items-center gap-2 pt-1">
               <a
                 href={BUSINESS_INFO.socials.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-white/5 hover:bg-[#0875D1] hover:text-white text-slate-300 border border-white/10 flex items-center justify-center transition-all"
+                className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white/5 hover:bg-[#0875D1] hover:text-white text-slate-300 border border-white/10 flex items-center justify-center transition-all"
                 aria-label="Facebook"
               >
                 <FacebookIcon className="w-4 h-4" />
@@ -48,7 +48,7 @@ export default function Footer() {
                 href={BUSINESS_INFO.socials.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-white/5 hover:bg-[#0875D1] hover:text-white text-slate-300 border border-white/10 flex items-center justify-center transition-all"
+                className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white/5 hover:bg-[#0875D1] hover:text-white text-slate-300 border border-white/10 flex items-center justify-center transition-all"
                 aria-label="Instagram"
               >
                 <InstagramIcon className="w-4 h-4" />
@@ -57,7 +57,7 @@ export default function Footer() {
                 href={BUSINESS_INFO.socials.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-white/5 hover:bg-[#0875D1] hover:text-white text-slate-300 border border-white/10 flex items-center justify-center transition-all"
+                className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white/5 hover:bg-[#0875D1] hover:text-white text-slate-300 border border-white/10 flex items-center justify-center transition-all"
                 aria-label="YouTube"
               >
                 <YoutubeIcon className="w-4 h-4" />
@@ -66,7 +66,7 @@ export default function Footer() {
                 href={BUSINESS_INFO.socials.maps}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-white/5 hover:bg-[#0875D1] hover:text-white text-slate-300 border border-white/10 flex items-center justify-center transition-all"
+                className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white/5 hover:bg-[#0875D1] hover:text-white text-slate-300 border border-white/10 flex items-center justify-center transition-all"
                 aria-label="Google Maps"
               >
                 <MapPin className="w-4 h-4 text-[#7DD3FC]" />
@@ -74,95 +74,95 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Quick Links */}
-          <div>
-            <h3 className="text-sm font-bold uppercase tracking-wider text-white mb-4 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-0.5 after:bg-[#0875D1]">
+          {/* Column 2: Quick Links (Col 1 on mobile 2-col grid) */}
+          <div className="col-span-1">
+            <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white mb-3 relative pb-1.5 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-6 after:h-0.5 after:bg-[#0875D1]">
               Quick Links
             </h3>
-            <ul className="space-y-2.5 text-xs sm:text-sm text-slate-300">
+            <ul className="space-y-2 text-xs text-slate-300">
               <li>
-                <Link to="/" className="hover:text-[#7DD3FC] flex items-center gap-1.5 transition-colors">
-                  <ChevronRight className="w-3.5 h-3.5 text-[#0875D1]" />
-                  Home
+                <Link to="/" className="hover:text-[#7DD3FC] flex items-center gap-1 transition-colors">
+                  <ChevronRight className="w-3 h-3 text-[#0875D1] shrink-0" />
+                  <span>Home</span>
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-[#7DD3FC] flex items-center gap-1.5 transition-colors">
-                  <ChevronRight className="w-3.5 h-3.5 text-[#0875D1]" />
-                  About Us
+                <Link to="/about" className="hover:text-[#7DD3FC] flex items-center gap-1 transition-colors">
+                  <ChevronRight className="w-3 h-3 text-[#0875D1] shrink-0" />
+                  <span>About Us</span>
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="hover:text-[#7DD3FC] flex items-center gap-1.5 transition-colors">
-                  <ChevronRight className="w-3.5 h-3.5 text-[#0875D1]" />
-                  All Services
+                <Link to="/services" className="hover:text-[#7DD3FC] flex items-center gap-1 transition-colors">
+                  <ChevronRight className="w-3 h-3 text-[#0875D1] shrink-0" />
+                  <span>Services</span>
                 </Link>
               </li>
               <li>
-                <Link to="/gallery" className="hover:text-[#7DD3FC] flex items-center gap-1.5 transition-colors">
-                  <ChevronRight className="w-3.5 h-3.5 text-[#0875D1]" />
-                  Work Gallery
+                <Link to="/gallery" className="hover:text-[#7DD3FC] flex items-center gap-1 transition-colors">
+                  <ChevronRight className="w-3 h-3 text-[#0875D1] shrink-0" />
+                  <span>Gallery</span>
                 </Link>
               </li>
               <li>
-                <Link to="/reviews" className="hover:text-[#7DD3FC] flex items-center gap-1.5 transition-colors">
-                  <ChevronRight className="w-3.5 h-3.5 text-[#0875D1]" />
-                  Customer Reviews
+                <Link to="/reviews" className="hover:text-[#7DD3FC] flex items-center gap-1 transition-colors">
+                  <ChevronRight className="w-3 h-3 text-[#0875D1] shrink-0" />
+                  <span>Reviews</span>
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-[#7DD3FC] flex items-center gap-1.5 transition-colors">
-                  <ChevronRight className="w-3.5 h-3.5 text-[#0875D1]" />
-                  Contact Support
+                <Link to="/contact" className="hover:text-[#7DD3FC] flex items-center gap-1 transition-colors">
+                  <ChevronRight className="w-3 h-3 text-[#0875D1] shrink-0" />
+                  <span>Contact</span>
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Services */}
-          <div>
-            <h3 className="text-sm font-bold uppercase tracking-wider text-white mb-4 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-0.5 after:bg-[#0875D1]">
-              Specialized Solutions
+          {/* Column 3: Services (Col 2 on mobile 2-col grid) */}
+          <div className="col-span-1">
+            <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white mb-3 relative pb-1.5 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-6 after:h-0.5 after:bg-[#0875D1]">
+              Solutions
             </h3>
-            <ul className="space-y-2.5 text-xs sm:text-sm text-slate-300">
+            <ul className="space-y-2 text-xs text-slate-300">
               {SERVICES_DATA.map((srv) => (
                 <li key={srv.slug}>
                   <Link
                     to={`/services/${srv.slug}`}
-                    className="hover:text-[#7DD3FC] flex items-center gap-1.5 transition-colors"
+                    className="hover:text-[#7DD3FC] flex items-center gap-1 transition-colors truncate"
                   >
-                    <ChevronRight className="w-3.5 h-3.5 text-[#0875D1]" />
-                    {srv.title}
+                    <ChevronRight className="w-3 h-3 text-[#0875D1] shrink-0" />
+                    <span className="truncate">{srv.title.replace("Sales & Service", "").replace("Solutions", "").trim()}</span>
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Column 4: Contact Info */}
-          <div>
-            <h3 className="text-sm font-bold uppercase tracking-wider text-white mb-4 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-0.5 after:bg-[#0875D1]">
+          {/* Column 4: Contact Info (Spans 2 cols on mobile, 1 col on lg) */}
+          <div className="col-span-2 md:col-span-2 lg:col-span-1 pt-3 sm:pt-0 border-t border-white/5 sm:border-t-0">
+            <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white mb-3 relative pb-1.5 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-6 after:h-0.5 after:bg-[#0875D1]">
               Service Center
             </h3>
-            <div className="space-y-3.5 text-xs sm:text-sm text-slate-300">
-              <div className="flex items-start gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2.5 text-xs text-slate-300">
+              <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#0875D1] shrink-0 mt-0.5" />
                 <span className="leading-relaxed">{BUSINESS_INFO.address.full}</span>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#10B981] shrink-0" />
                 <a href={`tel:${BUSINESS_INFO.phone}`} className="hover:text-[#7DD3FC] font-semibold">
                   {BUSINESS_INFO.phoneDisplay}
                 </a>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#0875D1] shrink-0" />
                 <a href={`mailto:${BUSINESS_INFO.email}`} className="hover:text-[#7DD3FC] truncate">
                   {BUSINESS_INFO.email}
                 </a>
               </div>
-              <div className="pt-2">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/10 border border-white/15 text-xs text-[#7DD3FC] font-bold">
+              <div className="pt-1">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-xl bg-white/10 border border-white/15 text-[11px] text-[#7DD3FC] font-bold">
                   <span className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse" />
                   Doorstep & Statewide Support
                 </div>
