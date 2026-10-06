@@ -89,28 +89,17 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Map Visual Preview / Directions Graphic */}
-            <div className="md:w-1/2 bg-slate-200 min-h-[300px] relative flex items-center justify-center p-8 tech-grid-pattern">
-              <div className="text-center p-6 rounded-2xl bg-white/95 backdrop-blur-md shadow-xl border border-slate-200 max-w-sm">
-                <div className="w-12 h-12 rounded-full bg-red-100 text-red-600 flex items-center justify-center mx-auto mb-3">
-                  <MapPin className="w-6 h-6" />
-                </div>
-                <h4 className="font-bold text-slate-900 text-base">Google Maps Location</h4>
-                <p className="text-xs text-slate-500 mt-1 mb-4">
-                  Open live turn-by-turn navigation directly in Google Maps for accurate routing to MS TECH.
-                </p>
-                <a
-                  href={BUSINESS_INFO.googleMapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-[#0875D1] text-white text-xs font-bold hover:bg-[#063B73] transition-colors shadow-sm"
-                >
-                  <Navigation className="w-3.5 h-3.5" />
-                  <span>Open in Google Maps</span>
-                </a>
-              </div>
+            {/* Map Visual Interactive Preview */}
+            <div className="md:w-1/2 min-h-[360px] relative">
+              <iframe
+                title="MS TECH Rasipuram Location Map"
+                src="https://maps.google.com/maps?q=No.5+Balasubramaniyan+Theater+Road,+Opp.+Kannan+Department+Store,+New+Bus+Stand,+Rasipuram,+Tamil+Nadu&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                className="w-full h-full min-h-[360px] border-0"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
-
           </ScaleIn>
         </div>
       </section>

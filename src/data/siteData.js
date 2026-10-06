@@ -17,12 +17,12 @@ export const BUSINESS_INFO = {
     pincode: "",
     full: "No.5 Balasubramaniyan Theater Road, Opp. Kannan Department Store, New Bus Stand, Rasipuram, Tamil Nadu"
   },
-  googleMapsUrl: "https://maps.google.com/?q=No.5+Balasubramaniyan+Theater+Road+Rasipuram+Tamil+Nadu",
+  googleMapsUrl: "https://maps.app.goo.gl/4yPx1LWsoEexhwy99",
   socials: {
-    facebook: "https://facebook.com",
-    instagram: "https://instagram.com",
-    youtube: "https://youtube.com",
-    maps: "https://maps.google.com/?q=No.5+Balasubramaniyan+Theater+Road+Rasipuram+Tamil+Nadu"
+    facebook: "https://www.facebook.com/share/p/1CAqWKxsf6/",
+    instagram: "https://www.instagram.com/mstechrasipuram?stkn=cDFwMHRhenV5MTds",
+    youtube: "https://youtube.com/@mstech_rasipuram?si=HFjX70Byg5tPgdTK",
+    maps: "https://maps.app.goo.gl/4yPx1LWsoEexhwy99"
   },
   tamilHeadline: "புதிய Laptop & Desktop Sales மற்றும் Laptop, Desktop, Printer, CCTV Camera Sales & Services"
 };

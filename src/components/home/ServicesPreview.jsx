@@ -102,7 +102,7 @@ export default function ServicesPreview() {
               href={BUSINESS_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#10B981] hover:bg-[#059669] text-white text-sm font-extrabold shadow-lg shadow-[#10B981]/25 transition-all hover:scale-105 active:scale-95"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#16A34A] hover:bg-[#15803D] text-white text-sm font-extrabold shadow-lg shadow-emerald-700/25 transition-all hover:scale-105 active:scale-95"
             >
               <span>Get Free Estimate on WhatsApp</span>
               <ArrowRight className="w-4 h-4" />

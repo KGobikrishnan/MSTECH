@@ -217,14 +217,25 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile Hamburger Button */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2.5 rounded-xl bg-slate-100 text-slate-700 hover:text-[#0875D1] transition-colors focus:outline-none"
-          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-        >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        {/* Mobile Call CTA + Hamburger Button */}
+        <div className="flex items-center gap-2 lg:hidden">
+          <a
+            href={`tel:${BUSINESS_INFO.phone}`}
+            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-100 text-[#042B55] border border-slate-200 text-xs font-extrabold active:scale-95 transition-all"
+            aria-label="Call Store"
+          >
+            <Phone className="w-3.5 h-3.5 text-[#0875D1] fill-current" />
+            <span>Call</span>
+          </a>
+
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="p-2.5 rounded-xl bg-slate-100 text-slate-700 hover:text-[#0875D1] transition-colors focus:outline-none"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+          >
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Drawer */}
