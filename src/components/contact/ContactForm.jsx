@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Send, CheckCircle2, Phone, MessageSquare } from "lucide-react";
+import { CheckCircle2, MessageSquare } from "lucide-react";
 import { toast } from "sonner";
 import { SERVICES_DATA, BUSINESS_INFO } from "../../data/siteData";
 
@@ -60,9 +60,9 @@ Please get back to me with the details.`;
           <div className="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4">
             <CheckCircle2 className="w-8 h-8" />
           </div>
-          <h4 className="text-xl font-bold text-[#042B55]">Message Sent Successfully!</h4>
+          <h4 className="text-xl font-bold text-[#042B55]">Continue your enquiry on WhatsApp</h4>
           <p className="text-sm text-slate-600 mt-2 max-w-sm mx-auto">
-            Our technical support team will review your requirement and call you back on your provided number.
+            Your enquiry is ready in WhatsApp. Send the message there and our team can help with the next steps.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
             <button
