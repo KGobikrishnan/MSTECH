@@ -121,3 +121,30 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #0875D1;
 }
+
+/* Infinite Marquee Animations for Reviews */
+@keyframes marqueeLeft {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marqueeRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeft 95s linear infinite;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marqueeRight 95s linear infinite;
+}
+
+.pause-hover:hover {
+  animation-play-state: paused;
+}

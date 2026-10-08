@@ -386,6 +386,33 @@ export const REVIEWS_DATA = [
     comment: "Purchased a brand new laptop with all required software configurations done in front of me. Genuine product and great pricing!",
     serviceUsed: "New Laptop Purchase",
     customerImage: "/person/Happy Customer/IMG_20250112_124301.webp"
+  },
+  {
+    id: 7,
+    name: "Sathiya Moorthi",
+    rating: 5,
+    date: "Verified Customer",
+    comment: "Purchased Lenovo LOQ Gaming laptop at affordable price. They spent enough time explaining everything with verified warranty. Best shop in Rasipuram!",
+    serviceUsed: "Lenovo LOQ Gaming Laptop",
+    customerImage: "/person/Happy Customer/people.jpeg"
+  },
+  {
+    id: 8,
+    name: "Prasanna R",
+    rating: 5,
+    date: "Local Guide • Rasipuram",
+    comment: "Very good place for custom PC building. Best price in town, great RGB setup and lightning fast performance for work and gaming.",
+    serviceUsed: "Custom PC Tower Build",
+    customerImage: "/person/Happy Customer/people4.jpeg"
+  },
+  {
+    id: 9,
+    name: "Karthinivas",
+    rating: 5,
+    date: "Local Guide • 9 reviews",
+    comment: "Purchased a brand new laptop with full OS setup and complete guidance. Very friendly service and trusted products.",
+    serviceUsed: "Brand New Laptop Delivery",
+    customerImage: "/person/Happy Customer/people2.jpeg"
   }
 ];
 
