@@ -473,5 +473,75 @@ export const GALLERY_DATA = [
     category: "Customer",
     image: "/person/Happy Customer/IMG_20250112_143043.webp",
     description: "Customer satisfaction with transparent pricing and warranty on replacement parts."
+  },
+  {
+    id: 13,
+    title: "MS TECH Storefront & Service Center Entrance",
+    category: "Store",
+    image: "/office/shopentrance.jpeg",
+    description: "Welcome to MS TECH Store & Chip-level Service Center in Rasipuram."
+  },
+  {
+    id: 14,
+    title: "Custom RGB Gaming & Workstation PC Build",
+    category: "Desktop",
+    image: "/pc.jpeg",
+    description: "Precision assembled high-performance desktop tower with gaming keyboard, mouse, and display setup."
+  },
+  {
+    id: 15,
+    title: "Lenovo Ideapad Laptops — Ready for Delivery",
+    category: "Laptop",
+    image: "/laptop.jpeg",
+    description: "Brand new brand-sealed Lenovo laptops configured and tested for customer handoff."
+  },
+  {
+    id: 16,
+    title: "Bulk Laptop Stock & Brand Inventory",
+    category: "Laptop",
+    image: "/laptop1.jpeg",
+    description: "Fresh arrival of new Lenovo laptops ready with original warranty and accessories."
+  },
+  {
+    id: 17,
+    title: "Happy Customer — Lenovo LOQ Gaming Laptop Delivery",
+    category: "Customer",
+    image: "/person/Happy Customer/people.jpeg",
+    description: "Handover of high-performance Lenovo LOQ gaming laptop to a happy student client."
+  },
+  {
+    id: 18,
+    title: "Happy Customer — New Laptop Handover",
+    category: "Customer",
+    image: "/person/Happy Customer/people2.jpeg",
+    description: "Pleased customer receiving their newly configured laptop with complete software setup."
+  },
+  {
+    id: 19,
+    title: "Happy Customer — Laptop Service & Delivery",
+    category: "Customer",
+    image: "/person/Happy Customer/people3.jpeg",
+    description: "Serviced laptop packaged and safely handed over to client with full verification."
+  },
+  {
+    id: 20,
+    title: "Happy Customer — Custom PC Setup Delivery",
+    category: "Customer",
+    image: "/person/Happy Customer/people4.jpeg",
+    description: "Client receiving custom assembled RGB desktop tower and multimedia setup."
+  },
+  {
+    id: 21,
+    title: "Happy Customer — Premium Laptop Delivery",
+    category: "Customer",
+    image: "/person/Happy Customer/people6.jpeg",
+    description: "Successful delivery of brand new laptop configured with manufacturer warranty."
+  },
+  {
+    id: 22,
+    title: "Happy Customer — New Laptop Purchase",
+    category: "Customer",
+    image: "/person/Happy Customer/people7.jpeg",
+    description: "Delighted customer receiving brand new tested laptop with instant setup assistance."
   }
 ];
