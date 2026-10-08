@@ -49,14 +49,21 @@ export default function About() {
                 Our business positioning is built around being <strong>"Your Technology Partner"</strong>. Instead of transactional sales, we focus on long-term customer satisfaction, genuine products and replacement parts, transparent diagnostics, and dependable after-sales assistance.
               </p>
 
-              <div className="pt-2 flex flex-wrap gap-4">
-                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex-1 min-w-[200px]">
-                  <span className="text-xs uppercase font-bold text-[#0875D1] tracking-wider block">Core Focus</span>
-                  <p className="text-sm font-bold text-[#042B55] mt-1">Quality Service & Genuine Spares</p>
+              <div className="pt-2 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+                  <span className="text-[11px] uppercase font-bold text-[#0875D1] tracking-wider block">Field Experience</span>
+                  <p className="text-xl font-extrabold text-[#042B55] mt-1">16+ Years</p>
+                  <span className="text-[11px] text-slate-500">Chip-level Mastery</span>
                 </div>
-                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex-1 min-w-[200px]">
-                  <span className="text-xs uppercase font-bold text-[#0875D1] tracking-wider block">Service Reach</span>
-                  <p className="text-sm font-bold text-[#042B55] mt-1">All Over Tamil Nadu</p>
+                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+                  <span className="text-[11px] uppercase font-bold text-[#0875D1] tracking-wider block">Established</span>
+                  <p className="text-xl font-extrabold text-[#042B55] mt-1">Since 2024</p>
+                  <span className="text-[11px] text-slate-500">Rasipuram Center</span>
+                </div>
+                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 col-span-2 sm:col-span-1">
+                  <span className="text-[11px] uppercase font-bold text-[#0875D1] tracking-wider block">Service Reach</span>
+                  <p className="text-xl font-extrabold text-[#042B55] mt-1">Tamil Nadu</p>
+                  <span className="text-[11px] text-slate-500">Statewide Support</span>
                 </div>
               </div>
             </FadeUp>
@@ -125,7 +132,7 @@ export default function About() {
                   எங்கள் வாடிக்கையாளர்களுக்கு எப்போதும் சிறந்த சேவை, அசல் உதிரிபாகங்கள் மற்றும் நியாயமான கட்டணத்தை வழங்குவதே எங்களின் முதன்மையான நோக்கம்.
                 </p>
                 <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                  With hands-on technical diagnostic mastery across multi-brand motherboards, SMPS power circuits, and high-precision laser printing systems, our workshop ensures you never pay for unnecessary parts or faulty diagnostics.
+                  With over <strong>16+ years of field experience</strong> in hands-on multi-brand motherboard diagnostics, SMPS power circuits, and high-precision laser printing systems, our Rasipuram workshop ensures you get genuine parts and precise chip-level care without trial-and-error costs.
                 </p>
 
                 <div className="pt-2 flex flex-wrap gap-3">

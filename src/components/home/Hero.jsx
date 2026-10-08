@@ -22,16 +22,25 @@ export default function Hero() {
               <span className="hero-live-dot" /> RASIPURAM · NAMAKKAL · SALEM · TAMIL NADU
             </motion.div>
 
-            {/* Google Reviews Trust Anchor directly under eyebrow */}
-            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .4, delay: .05 }} className="mt-3.5 inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-white border border-slate-200/90 shadow-xs">
-              <div className="flex items-center text-amber-400">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-sm leading-none">★</span>
-                ))}
+            {/* Google Reviews & Experience Trust Anchor directly under eyebrow */}
+            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .4, delay: .05 }} className="mt-3.5 flex flex-wrap items-center gap-2.5">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-slate-200/90 shadow-xs">
+                <div className="flex items-center text-amber-400">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-sm leading-none">★</span>
+                  ))}
+                </div>
+                <span className="text-xs font-extrabold text-[#10263F]">5.0 Rating</span>
+                <span className="text-slate-300">•</span>
+                <span className="text-[11px] font-semibold text-slate-500">Google Reviews</span>
               </div>
-              <span className="text-xs font-extrabold text-[#10263F]">5.0 Google Rating</span>
-              <span className="text-slate-300">•</span>
-              <span className="text-[11px] font-semibold text-slate-500">Trusted by 500+ Locals</span>
+
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#EAF6FF] border border-[#0875D1]/30 text-[#0875D1] shadow-xs">
+                <ShieldCheck size={14} className="text-[#0875D1]" />
+                <span className="text-xs font-extrabold">16+ Years Experience</span>
+                <span className="text-[#0875D1]/40">•</span>
+                <span className="text-[11px] font-semibold text-[#042B55]">Est. 2024</span>
+              </div>
             </motion.div>
 
             <motion.h1 initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .55, delay: .08 }} className="mt-4 text-[2.6rem] sm:text-5xl lg:text-[3.9rem] leading-[1.08] tracking-[-.045em] font-extrabold text-[#10263F]">

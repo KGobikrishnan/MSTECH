@@ -18,7 +18,7 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-2 lg:col-span-1 space-y-3.5">
             <Logo variant="dark" />
             <p className="text-xs text-slate-300 leading-relaxed pt-1 max-w-lg">
-              Your comprehensive technology partner in Rasipuram and across Tamil Nadu. Dedicated to sales, chip-level repairs, printer servicing, and CCTV setups.
+              Established in 2024 with over 16+ years of field expertise. Your comprehensive technology partner in Rasipuram and across Tamil Nadu for laptop sales, chip-level repairs, and CCTV solutions.
             </p>
             
             <div className="p-3 rounded-xl bg-white/5 border border-white/10 max-w-md">

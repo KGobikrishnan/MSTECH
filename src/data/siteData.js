@@ -24,6 +24,10 @@ export const BUSINESS_INFO = {
     youtube: "https://youtube.com/@mstech_rasipuram?si=HFjX70Byg5tPgdTK",
     maps: "https://maps.app.goo.gl/4yPx1LWsoEexhwy99"
   },
+  establishedYear: 2024,
+  sinceText: "Since 2024",
+  experienceYears: "16+ Years",
+  experienceBadge: "16+ Years Field Experience",
   tamilHeadline: "புதிய Laptop & Desktop Sales மற்றும் Laptop, Desktop, Printer, CCTV Camera Sales & Services"
 };
 
@@ -232,8 +236,8 @@ export const TRUST_INDICATORS = [
 
 export const WHY_CHOOSE_ITEMS = [
   {
-    title: "Experienced & Skilled Team",
-    description: "Deep hands-on expertise in multi-brand laptop, desktop, printer chip-level service and CCTV integration.",
+    title: "16+ Years Tech Experience",
+    description: "Over 16 years of hands-on chip-level expertise in laptops, desktop motherboards, printer mechanics, and security systems.",
     icon: "Award"
   },
   {

@@ -49,10 +49,10 @@ export default function AboutPreview() {
                   Lead Technician & Founder
                 </span>
                 <span className="text-sm sm:text-base font-extrabold text-[#042B55] block leading-tight">
-                  MS TECH Leadership
+                  16+ Years Industry Experience
                 </span>
                 <span className="text-[10px] sm:text-[11px] text-slate-500 font-medium">
-                  Direct Hands-on Diagnostic Care
+                  MS TECH Rasipuram • Since 2024
                 </span>
               </div>
             </div>
