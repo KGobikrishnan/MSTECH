@@ -5,9 +5,19 @@ import { FadeUp, StaggerContainer, StaggerItem } from "../common/ScrollAnimation
 
 const FAQS = [
   {
-    q: "How long does a typical laptop screen or keyboard replacement take?",
-    qTamil: "லேப்டாப் ஸ்கிரீன் அல்லது கீபோர்டு மாற்ற எவ்வளவு நேரம் ஆகும்?",
+    q: "Which is the best laptop service center in Rasipuram?",
+    qTamil: "ராசிபுரத்தில் சிறந்த லேப்டாப் சர்வீஸ் சென்டர் எது?",
+    a: "MS TECH (M-Tech Solutions) is recognized as the best-rated computer and laptop care center in Rasipuram with 16+ years of specialized chip-level technical mastery and a 5.0 Google rating. Conveniently located on Balasubramaniyan Theater Road, opposite Kannan Department Store near the New Bus Stand."
+  },
+  {
+    q: "How long does a typical laptop screen, keyboard or SSD upgrade take?",
+    qTamil: "லேப்டாப் ஸ்கிரீன், கீபோர்டு அல்லது SSD மாற்ற எவ்வளவு நேரம் ஆகும்?",
     a: "Standard screen, keyboard, RAM, and SSD upgrades are usually completed in 2 to 4 hours on the same day if parts are in stock. Complex chip-level motherboard diagnostics take 24–48 hours for full stress testing."
+  },
+  {
+    q: "Can I buy brand new and refurbished laptops with warranty in Rasipuram?",
+    qTamil: "புதிய மற்றும் புதுப்பிக்கப்பட்ட லேப்டாப்கள் வாரண்டியுடன் கிடைக்குமா?",
+    a: "Yes! We stock brand new brand-sealed laptops (Dell, HP, Lenovo, ASUS, Acer) and verified grade-A refurbished laptops with original company warranty, genuine Windows OS, MS Office setup, and free accessories bundle."
   },
   {
     q: "Do you offer doorstep pickup and delivery in and around Rasipuram?",
@@ -23,11 +33,6 @@ const FAQS = [
     q: "Will my hard disk data remain private and secure during repair?",
     qTamil: "எனது டேட்டா (Data) பாதுகாப்பாக இருக்குமா?",
     a: "100% yes. We follow strict data confidentiality protocols. We never access, transfer, or modify your personal files. For added peace of mind, customers can also remove their storage drive before handing over the device for external hardware repairs."
-  },
-  {
-    q: "Do you provide genuine GST tax invoices for business purchases and repairs?",
-    qTamil: "நிறுவனங்களுக்கு GST இன்வாய்ஸ் கிடைக்குமா?",
-    a: "Yes, we provide official GST bills for all corporate orders, school/college IT contracts, CCTV camera installations, and retail hardware purchases."
   },
   {
     q: "What warranty do you offer on replacement parts and repairs?",

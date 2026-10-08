@@ -13,11 +13,34 @@ export default function About() {
   return (
     <>
       <Helmet>
-        <title>About MS TECH | Technology Sales & Service Partner in Tamil Nadu</title>
+        <title>About MS TECH | 16+ Years Tech Experience | Rasipuram, Tamil Nadu</title>
         <meta
           name="description"
-          content="Learn more about MS TECH, your trusted technology partner for laptop repairs, custom PC assemblies, printer servicing, and CCTV camera installations in Rasipuram and across Tamil Nadu."
+          content="Learn more about MS TECH Rasipuram, founded with 16+ years of specialized technical expertise in laptop diagnostics, chip-level logic board repairs, and custom PC builds across Tamil Nadu."
         />
+        <link rel="canonical" href="https://mstechservices.in/about" />
+        <meta property="og:title" content="About MS TECH | Technology Sales & Service Partner" />
+        <meta property="og:description" content="Dedicated technology sales and service center founded in 2024 with 16+ years of field experience in Rasipuram, Tamil Nadu." />
+        <meta property="og:url" content="https://mstechservices.in/about" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "MS TECH",
+              "foundingDate": "2024",
+              "description": "Technology sales and service center specializing in chip-level computer repairs with 16+ years of expert hands-on field experience.",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "No.5 Balasubramaniyan Theater Road, Opp. Kannan Department Store",
+                "addressLocality": "Rasipuram",
+                "addressRegion": "Tamil Nadu",
+                "addressCountry": "IN"
+              }
+            }
+          })}
+        </script>
       </Helmet>
 
       <PageHero

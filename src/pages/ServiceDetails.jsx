@@ -42,11 +42,54 @@ export default function ServiceDetails() {
   const IconComp = iconMap[service.icon] || Laptop;
   const relatedServices = SERVICES_DATA.filter((s) => s.slug !== service.slug).slice(0, 3);
 
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": `${service.title} in Rasipuram`,
+    "serviceType": service.title,
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "MS TECH",
+      "telephone": "+919843777146",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "No.5 Balasubramaniyan Theater Road, Opp. Kannan Department Store",
+        "addressLocality": "Rasipuram",
+        "addressRegion": "Tamil Nadu",
+        "addressCountry": "IN"
+      }
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Rasipuram, Namakkal, Salem, Tamil Nadu"
+    },
+    "description": service.description,
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": `${service.title} Services`,
+      "itemListElement": service.features.map((feat, idx) => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": feat
+        }
+      }))
+    }
+  };
+
   return (
     <>
       <Helmet>
-        <title>{`${service.title} | MS TECH Rasipuram, Tamil Nadu`}</title>
-        <meta name="description" content={`${service.description} Dedicated support across Tamil Nadu.`} />
+        <title>{`${service.title} in Rasipuram | MS TECH Tamil Nadu`}</title>
+        <meta name="description" content={`${service.description} 16+ years experience in Rasipuram & Tamil Nadu. 100% genuine spares & transparent diagnosis.`} />
+        <link rel="canonical" href={`https://mstechservices.in/services/${service.slug}`} />
+        <meta property="og:title" content={`${service.title} | MS TECH Rasipuram`} />
+        <meta property="og:description" content={`${service.description} Dedicated support across Tamil Nadu.`} />
+        <meta property="og:url" content={`https://mstechservices.in/services/${service.slug}`} />
+        <meta property="og:type" content="article" />
+        <script type="application/ld+json">
+          {JSON.stringify(serviceJsonLd)}
+        </script>
       </Helmet>
 
       <PageHero

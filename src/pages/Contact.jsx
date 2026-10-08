@@ -12,11 +12,35 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact MS TECH | Rasipuram Technology Service Center</title>
+        <title>Contact MS TECH | Laptop & Computer Service Center in Rasipuram</title>
         <meta
           name="description"
-          content="Contact MS TECH in Rasipuram, Tamil Nadu. Phone: 9843777146. Address: No.5 Balasubramaniyan Theater Road, Opp Kannan Department Store, New Bus Stand."
+          content="Contact MS TECH Rasipuram: Call +91 9843777146 or visit our center opposite Kannan Department Store, New Bus Stand Road. Free preliminary diagnostic & immediate support."
         />
+        <link rel="canonical" href="https://mstechservices.in/contact" />
+        <meta property="og:title" content="Contact MS TECH | Rasipuram Technology Center" />
+        <meta property="og:description" content="Reach out to MS TECH in Rasipuram for fast laptop diagnosis, PC assembly, and CCTV inquiries." />
+        <meta property="og:url" content="https://mstechservices.in/contact" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "mainEntity": {
+              "@type": "LocalBusiness",
+              "name": "MS TECH",
+              "telephone": "+919843777146",
+              "email": "mstechservices.in@gmail.com",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "No.5 Balasubramaniyan Theater Road, Opp. Kannan Department Store, New Bus Stand",
+                "addressLocality": "Rasipuram",
+                "addressRegion": "Tamil Nadu",
+                "postalCode": "637408",
+                "addressCountry": "IN"
+              }
+            }
+          })}
+        </script>
       </Helmet>
 
       <PageHero

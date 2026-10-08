@@ -17,11 +17,29 @@ export default function Reviews() {
   return (
     <>
       <Helmet>
-        <title>MS TECH Reviews | Customer Experiences & Verified Feedback</title>
+        <title>Customer Reviews & Ratings | MS TECH Rasipuram (5.0★ Google Reviews)</title>
         <meta
           name="description"
-          content="Read genuine customer reviews for MS TECH. Reliable laptop repairs, fast SSD upgrades, desktop assembly, and CCTV installations in Rasipuram and across Tamil Nadu."
+          content="Read 100+ verified 5-star customer reviews for MS TECH in Rasipuram. Fast laptop repairs, transparent pricing, chip-level service, and friendly customer support."
         />
+        <link rel="canonical" href="https://mstechservices.in/reviews" />
+        <meta property="og:title" content="MS TECH Customer Reviews | 5.0 Star Rating" />
+        <meta property="og:description" content="Discover what clients say about MS TECH laptop repair and technology services in Rasipuram and across Tamil Nadu." />
+        <meta property="og:url" content="https://mstechservices.in/reviews" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "MS TECH",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5.0",
+              "bestRating": "5",
+              "worstRating": "1",
+              "ratingCount": "120"
+            }
+          })}
+        </script>
       </Helmet>
 
       <PageHero
