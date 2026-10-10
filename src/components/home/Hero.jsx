@@ -49,7 +49,7 @@ export default function Hero() {
             <motion.p initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .5, delay: .16 }} className="mt-5 text-base sm:text-lg leading-relaxed text-slate-600 max-w-xl">
               Fast, reliable repairs for all brands. Upgrade your setup with our range of new and refurbished laptops. Authorized service & 100% genuine parts.
             </motion.p>
-            <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .5, delay: .23 }} className="mt-8 flex flex-col sm:flex-row gap-3">
+            <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .5, delay: .23 }} className="mt-8 flex flex-wrap gap-3">
               <a 
                 href={BUSINESS_INFO.whatsappUrl} 
                 target="_blank" 
@@ -57,6 +57,9 @@ export default function Hero() {
                 className="hero-primary-cta !bg-[#16A34A] hover:!bg-[#15803D] text-white shadow-lg shadow-emerald-600/20"
               >
                 <MessageCircle size={18} className="fill-current" /> Book a Repair <ArrowRight size={17} />
+              </a>
+              <a href="#service-estimator" className="hero-secondary-cta !border-[#0875D1]/30 hover:!border-[#0875D1] text-[#0875D1]">
+                <span>Check Cost & Turnaround</span>
               </a>
               <Link to="/services/laptop" className="hero-secondary-cta">
                 <Laptop size={17} className="text-[#1674C8]" /> View Laptops

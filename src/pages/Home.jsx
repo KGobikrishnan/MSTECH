@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import Hero from "../components/home/Hero";
 import ProcessSteps from "../components/home/ProcessSteps";
+import ServiceEstimator from "../components/home/ServiceEstimator";
 import ServicesPreview from "../components/home/ServicesPreview";
 import AboutPreview from "../components/home/AboutPreview";
 import WhyChooseUs from "../components/home/WhyChooseUs";
@@ -217,6 +218,13 @@ export default function Home() {
 
         {/* 4-Step Transparent Repair Process */}
         <ProcessSteps />
+
+        {/* Instant Funnel Conversion: Service Estimator & WhatsApp Lead Generator */}
+        <section id="service-estimator" className="py-16 sm:py-20 bg-slate-100/70 border-t border-slate-200/80 relative">
+          <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <ServiceEstimator />
+          </div>
+        </section>
 
         {/* Core Services Catalog */}
         <ServicesPreview />
