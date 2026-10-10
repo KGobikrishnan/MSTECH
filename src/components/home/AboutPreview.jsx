@@ -34,11 +34,11 @@ export default function AboutPreview() {
               </div>
             </div>
 
-            {/* Overlapping Owner Badge Card with Real owner.webp */}
+            {/* Overlapping Owner Badge Card with Real owner.png */}
             <div className="mt-4 sm:mt-0 sm:absolute sm:-bottom-8 sm:-right-3 md:-right-6 bg-white/95 backdrop-blur-xl rounded-2xl p-3.5 sm:p-5 shadow-xl sm:shadow-2xl border border-slate-200 flex items-center gap-3.5 sm:gap-4 max-w-sm sm:max-w-xs hover:scale-105 transition-transform">
               <div className="relative w-12 h-12 sm:w-16 sm:h-16 rounded-2xl overflow-hidden border-2 border-[#0875D1] shadow-md shrink-0">
                 <img
-                  src="/person/owner.webp"
+                  src="/person/owner.png"
                   alt="MS TECH Founder & Chief Technician"
                   className="w-full h-full object-cover"
                 />

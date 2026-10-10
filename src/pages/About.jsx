@@ -115,64 +115,107 @@ export default function About() {
       </section>
 
       {/* Leadership / Owner Profile Section with ScaleIn */}
-      <section className="py-16 sm:py-20 bg-gradient-to-b from-slate-50 via-white to-slate-50 border-t border-slate-200/80">
+      <section className="py-16 sm:py-24 bg-gradient-to-b from-slate-50 via-white to-slate-50 border-t border-slate-200/80 relative">
         <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-10">
-          <ScaleIn className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-[#0875D1]/5 rounded-full blur-3xl pointer-events-none" />
+          <ScaleIn className="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 border border-slate-200/90 shadow-2xl relative overflow-hidden">
+            {/* Ambient background glow accents */}
+            <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#0875D1]/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#38BDF8]/10 rounded-full blur-3xl pointer-events-none" />
 
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
-              {/* Owner Photo */}
-              <div className="md:col-span-4 flex flex-col items-center text-center">
-                <div className="relative w-52 h-52 sm:w-60 sm:h-60 rounded-3xl overflow-hidden border-4 border-[#0875D1]/30 shadow-2xl shadow-[#0875D1]/20 group">
-                  <img
-                    src="/person/owner.webp"
-                    alt="MS TECH Owner & Chief Technical Lead"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#042B55]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <span className="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-[#10B981] text-white text-[11px] font-bold shadow-md flex items-center gap-1">
-                    <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-                    Available In-Store
-                  </span>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+              
+              {/* Owner Photo Showcase - Premium Large Format */}
+              <div className="lg:col-span-5 flex flex-col items-center">
+                <div className="relative w-full max-w-md lg:max-w-none rounded-3xl overflow-hidden border-2 border-[#0875D1]/20 shadow-2xl shadow-[#042B55]/15 bg-slate-900 group">
+                  {/* Aspect ratio to show the full workspace with laptop nicely */}
+                  <div className="relative aspect-[4/3] sm:aspect-[16/11] w-full overflow-hidden">
+                    <img
+                      src="/person/owner.png"
+                      alt="MS TECH Owner & Chief Technical Lead"
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#042B55]/85 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+                  </div>
+
+                  {/* Floating In-Store Status Badge */}
+                  <div className="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/80 shadow-md">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#10B981] animate-pulse" />
+                    <span className="text-[11px] font-extrabold text-[#042B55] tracking-tight">Available In-Store</span>
+                  </div>
+
+                  {/* Bottom Image Overlay Card */}
+                  <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-white/60 shadow-lg flex items-center justify-between">
+                    <div>
+                      <h4 className="text-base font-black text-[#042B55] leading-none">
+                        Manikandan
+                      </h4>
+                      <p className="text-[11px] font-bold text-[#0875D1] mt-1">
+                        Founder & Chief Hardware Specialist
+                      </p>
+                    </div>
+                    <span className="px-2.5 py-1 rounded-lg bg-[#EAF6FF] text-[#0875D1] text-[10px] font-extrabold border border-[#0875D1]/20 shrink-0">
+                      16+ Yrs Exp
+                    </span>
+                  </div>
                 </div>
-                <h3 className="text-xl font-black text-[#042B55] mt-4">
-                  MS TECH Leadership
-                </h3>
-                <span className="text-xs font-bold text-[#0875D1] uppercase tracking-wider">
-                  Founder & Senior Technical Lead
-                </span>
+
+                <div className="mt-4 flex items-center gap-2 text-xs font-semibold text-slate-500">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#0875D1]" />
+                  <span>Direct One-on-One Technical Consultation in Rasipuram</span>
+                </div>
               </div>
 
               {/* Owner Message & Commitments */}
-              <div className="md:col-span-8 space-y-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EAF6FF] text-[#0875D1] text-xs font-bold uppercase tracking-wider">
+              <div className="lg:col-span-7 space-y-5">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EAF6FF] border border-[#0875D1]/25 text-[#0875D1] text-xs font-bold uppercase tracking-wider">
                   Founder's Promise
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-black text-[#042B55]">
+
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#042B55] tracking-tight leading-snug">
                   "Every Device is Repaired with Complete Transparency & Responsibility."
                 </h3>
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-tamil">
-                  எங்கள் வாடிக்கையாளர்களுக்கு எப்போதும் சிறந்த சேவை, அசல் உதிரிபாகங்கள் மற்றும் நியாயமான கட்டணத்தை வழங்குவதே எங்களின் முதன்மையான நோக்கம்.
-                </p>
+
+                <div className="p-4 rounded-2xl bg-[#EAF6FF]/60 border border-[#0875D1]/20">
+                  <p className="text-sm sm:text-base text-[#042B55] font-tamil font-semibold leading-relaxed">
+                    எங்கள் வாடிக்கையாளர்களுக்கு எப்போதும் சிறந்த சேவை, அசல் உதிரிபாகங்கள் மற்றும் நியாயமான கட்டணத்தை வழங்குவதே எங்களின் முதன்மையான நோக்கம்.
+                  </p>
+                </div>
+
                 <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                  With over <strong>16+ years of field experience</strong> in hands-on multi-brand motherboard diagnostics, SMPS power circuits, and high-precision laser printing systems, our Rasipuram workshop ensures you get genuine parts and precise chip-level care without trial-and-error costs.
+                  With over <strong>16+ years of specialized field experience</strong> in multi-brand chip-level motherboard diagnostics, SMPS power circuits, and high-precision laser printing systems, our Rasipuram workshop ensures you get genuine parts and precise chip-level care without trial-and-error costs.
                 </p>
 
-                <div className="pt-2 flex flex-wrap gap-3">
+                {/* Key Pillars Grid */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-1">
+                  <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#0875D1] block">Diagnostics</span>
+                    <span className="text-xs sm:text-sm font-extrabold text-[#042B55] mt-0.5 block">100% Transparent</span>
+                  </div>
+                  <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#0875D1] block">Replacement Parts</span>
+                    <span className="text-xs sm:text-sm font-extrabold text-[#042B55] mt-0.5 block">OEM Verified</span>
+                  </div>
+                  <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 col-span-2 sm:col-span-1">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#0875D1] block">Turnaround</span>
+                    <span className="text-xs sm:text-sm font-extrabold text-[#042B55] mt-0.5 block">Same-Day Priority</span>
+                  </div>
+                </div>
+
+                <div className="pt-2 flex flex-wrap gap-3.5">
                   <a
                     href={`tel:${BUSINESS_INFO.phone}`}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#0875D1] hover:bg-[#042B55] text-white text-xs font-bold transition-all shadow-md"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0875D1] hover:bg-[#042B55] text-white text-xs sm:text-sm font-extrabold transition-all shadow-md shadow-[#0875D1]/20 hover:scale-105 active:scale-95"
                   >
-                    <Phone className="w-3.5 h-3.5 fill-current" />
+                    <Phone className="w-4 h-4 fill-current" />
                     <span>Talk Directly: {BUSINESS_INFO.phoneDisplay}</span>
                   </a>
                   <a
                     href={BUSINESS_INFO.whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#10B981] hover:bg-[#059669] text-white text-xs font-bold transition-all shadow-md"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#10B981] hover:bg-[#059669] text-white text-xs sm:text-sm font-extrabold transition-all shadow-md shadow-emerald-500/20 hover:scale-105 active:scale-95"
                   >
-                    <MessageCircle className="w-3.5 h-3.5 fill-current" />
+                    <MessageCircle className="w-4 h-4 fill-current" />
                     <span>WhatsApp Direct</span>
                   </a>
                 </div>
