@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { MessageCircle, ArrowUp } from "lucide-react";
 import { BUSINESS_INFO } from "../../data/siteData";
+import { useLenis } from "../common/SmoothScrollProvider";
 
 export default function FloatingActions() {
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const lenis = useLenis();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,7 +16,11 @@ export default function FloatingActions() {
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (lenis) {
+      lenis.scrollTo(0, { duration: 1.2 });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   return (

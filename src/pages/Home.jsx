@@ -16,17 +16,17 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>MS TECH | Premium Laptop Sales & Service Center in Rasipuram</title>
+        <title>MS Rasipuram | MS TECH - Top Laptop, Printer & CCTV Service in Rasipuram</title>
         <meta
           name="description"
-          content="MS TECH Rasipuram: 16+ years experience in chip-level laptop service, desktop PC builds, printer repair & CCTV camera installation. Authorized spares, same-day diagnosis & 5.0 Google rating."
+          content="MS Rasipuram (MS TECH): 16+ years experience in chip-level laptop service, desktop PC builds, printer repair & CCTV camera installation in Rasipuram. Authorized spares, same-day diagnosis & 5.0 Google rating."
         />
         <meta
           name="keywords"
-          content="laptop service in rasipuram, computer service rasipuram, laptop repair near me, best laptop shop in rasipuram, hp service rasipuram, dell service rasipuram, lenovo service rasipuram, cctv installation rasipuram, printer service rasipuram, ms tech rasipuram"
+          content="ms rasipuram, ms tech rasipuram, ms computer rasipuram, ms laptop rasipuram, ms service rasipuram, laptop service in rasipuram, computer service rasipuram, laptop repair near me, best laptop shop in rasipuram, hp service rasipuram, dell service rasipuram, lenovo service rasipuram, cctv installation rasipuram, printer service rasipuram, ms tech services"
         />
         <link rel="canonical" href="https://mstechservices.in/" />
-        <meta property="og:title" content="MS TECH | Premium Laptop Sales & Service in Rasipuram" />
+        <meta property="og:title" content="MS Rasipuram | MS TECH - Laptop, Printer & CCTV Service Center" />
         <meta
           property="og:description"
           content="Rasipuram's highest-rated computer & laptop care center. Over 16+ years hands-on field experience. Fast diagnosis, genuine OEM parts, transparent pricing."
@@ -42,7 +42,13 @@ export default function Home() {
                 "@type": ["LocalBusiness", "ComputerStore", "ElectronicsRepairShop"],
                 "@id": "https://mstechservices.in/#store",
                 "name": "MS TECH",
-                "alternateName": ["M-Tech Solutions", "MS Tech Rasipuram", "MS TECH Computer Service"],
+                "alternateName": [
+                  "MS Rasipuram",
+                  "MS Tech Rasipuram",
+                  "MS TECH Computer Service",
+                  "M-Tech Solutions",
+                  "MS Computer Service Rasipuram"
+                ],
                 "url": "https://mstechservices.in",
                 "logo": "https://mstechservices.in/logo.png",
                 "image": [

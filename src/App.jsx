@@ -5,7 +5,7 @@ import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import MobileActionBar from "./components/layout/MobileActionBar";
 import FloatingActions from "./components/layout/FloatingActions";
-import ScrollToTop from "./components/layout/ScrollToTop";
+import SmoothScrollProvider from "./components/common/SmoothScrollProvider";
 
 // Pages
 import Home from "./pages/Home";
@@ -19,8 +19,8 @@ import NotFound from "./pages/NotFound";
 
 export default function App() {
   return (
-    <div className="flex flex-col min-h-screen relative selection:bg-[#0875D1] selection:text-white">
-      <ScrollToTop />
+    <SmoothScrollProvider>
+      <div className="flex flex-col min-h-screen relative selection:bg-[#0875D1] selection:text-white">
       
       {/* Desktop Header */}
       <TopBar />
@@ -49,5 +49,6 @@ export default function App() {
       {/* Floating Actions (WhatsApp & Back-to-Top) */}
       <FloatingActions />
     </div>
+  </SmoothScrollProvider>
   );
 }

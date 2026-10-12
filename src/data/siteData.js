@@ -574,5 +574,40 @@ export const GALLERY_DATA = [
     category: "Customer",
     image: "/person/Happy Customer/people7.jpeg",
     description: "Delighted customer receiving brand new tested laptop with instant setup assistance."
+  },
+  {
+    id: 23,
+    title: "Hikvision HD & IP Security Camera Systems",
+    category: "CCTV",
+    image: "/CCTV1.jpeg",
+    description: "Multi-channel Hikvision dome, bullet and IP surveillance cameras for residential and commercial security."
+  },
+  {
+    id: 24,
+    title: "Hikvision Smart Night-Vision Dome Camera",
+    category: "CCTV",
+    image: "/CCTV2.webp",
+    description: "High-definition motorized smart surveillance dome camera with IR night vision and remote phone app monitoring."
+  },
+  {
+    id: 25,
+    title: "Multi-Brand Surveillance Camera Lineup",
+    category: "CCTV",
+    image: "/CCTV3.png",
+    description: "Complete inventory of outdoor bullet, indoor dome, speed dome, and PTZ CCTV cameras available for sales and installation."
+  },
+  {
+    id: 26,
+    title: "HP Multi-Function Laserjet Pro Printer",
+    category: "Printer",
+    image: "/printer1.jpg",
+    description: "High-speed laser printing, scanning, and copying solution with digital display for office and commercial use."
+  },
+  {
+    id: 27,
+    title: "HP All-in-One Ink Tank Smart Printer",
+    category: "Printer",
+    image: "/printer2.webp",
+    description: "Ultra-low-cost high-yield color ink tank printer with Wi-Fi wireless connectivity and spill-free refill system."
   }
 ];
