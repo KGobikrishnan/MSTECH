@@ -30,7 +30,7 @@ export default function ContactInfo() {
             <p className="text-sm text-slate-600 mt-1 leading-relaxed">
               {BUSINESS_INFO.address.line1}<br />
               {BUSINESS_INFO.address.line2}<br />
-              {BUSINESS_INFO.address.landmark} {BUSINESS_INFO.address.city}, {BUSINESS_INFO.address.state}
+              {BUSINESS_INFO.address.landmark} {BUSINESS_INFO.address.city}, {BUSINESS_INFO.address.state} - {BUSINESS_INFO.address.pincode}
             </p>
             <a
               href={BUSINESS_INFO.googleMapsUrl}

@@ -14,8 +14,8 @@ export const BUSINESS_INFO = {
     landmark: "New Bus Stand,",
     city: "Rasipuram",
     state: "Tamil Nadu",
-    pincode: "",
-    full: "No.5 Balasubramaniyan Theater Road, Opp. Kannan Department Store, New Bus Stand, Rasipuram, Tamil Nadu"
+    pincode: "637408",
+    full: "No.5 Balasubramaniyan Theater Road, Opp. Kannan Department Store, New Bus Stand, Rasipuram, Tamil Nadu - 637408"
   },
   googleMapsUrl: "https://maps.app.goo.gl/4yPx1LWsoEexhwy99",
   socials: {
