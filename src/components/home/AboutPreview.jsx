@@ -87,19 +87,19 @@ export default function AboutPreview() {
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
                 <CheckCircle2 className="w-5 h-5 text-[#0875D1] shrink-0" />
-                <span>Laptop & Desktop Chip-Level Care</span>
+                <span>Custom PC Building (All-India Delivery)</span>
               </div>
               <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
                 <CheckCircle2 className="w-5 h-5 text-[#0875D1] shrink-0" />
-                <span>Laser & Ink Tank Printer Solutions</span>
+                <span>New & 2nd Hand Laptops with Warranty</span>
               </div>
               <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
                 <CheckCircle2 className="w-5 h-5 text-[#0875D1] shrink-0" />
-                <span>Commercial CCTV Setup & Mobile Sync</span>
+                <span>16+ Yrs Chip-Level Repair Expertise</span>
               </div>
               <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
                 <CheckCircle2 className="w-5 h-5 text-[#0875D1] shrink-0" />
-                <span>Prompt Support Across Tamil Nadu</span>
+                <span>Printer Service & CCTV Installation</span>
               </div>
             </div>
 

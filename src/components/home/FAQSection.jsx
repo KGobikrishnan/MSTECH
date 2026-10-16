@@ -15,9 +15,14 @@ const FAQS = [
     a: "Standard screen, keyboard, RAM, and SSD upgrades are usually completed in 2 to 4 hours on the same day if parts are in stock. Complex chip-level motherboard diagnostics take 24–48 hours for full stress testing."
   },
   {
+    q: "Do you ship Custom PCs and 2nd Hand / Refurbished Laptops across India?",
+    qTamil: "இந்தியா முழுவதும் Custom PC மற்றும் 2nd Hand Laptop அனுப்பி வைக்கிறீர்களா?",
+    a: "Yes, absolutely! We build customized gaming, video editing, and office PCs to any budget, and sell verified grade-A 2nd hand / refurbished laptops with warranty. We safely package them in shock-proof multi-layer thermocol/wooden crates and dispatch via tracked express courier across Tamil Nadu and all states in India."
+  },
+  {
     q: "Can I buy brand new and refurbished laptops with warranty in Rasipuram?",
     qTamil: "புதிய மற்றும் புதுப்பிக்கப்பட்ட லேப்டாப்கள் வாரண்டியுடன் கிடைக்குமா?",
-    a: "Yes! We stock brand new brand-sealed laptops (Dell, HP, Lenovo, ASUS, Acer) and verified grade-A refurbished laptops with original company warranty, genuine Windows OS, MS Office setup, and free accessories bundle."
+    a: "Yes! We stock brand new factory-sealed laptops (Dell, HP, Lenovo, ASUS, Acer) and verified grade-A refurbished / 2nd hand laptops with original warranty, genuine Windows OS, MS Office setup, and free accessories bundle."
   },
   {
     q: "Do you offer doorstep pickup and delivery in and around Rasipuram?",

@@ -2,7 +2,7 @@ export const BUSINESS_INFO = {
   name: "MS TECH",
   tagline: "TRUSTED SERVICE HERE",
   positioning: "Your Technology Partner",
-  coverage: "All Over Tamil Nadu",
+  coverage: "Rasipuram • Tamil Nadu • All Over India Delivery",
   phone: "9843777146",
   phoneDisplay: "+91 9843777146",
   email: "mstechservices.in@gmail.com",
@@ -35,14 +35,15 @@ export const SERVICES_DATA = [
   {
     slug: "laptop",
     title: "Laptop Sales & Service",
-    shortDescription: "Sales, repair, OS installation, upgrades & maintenance.",
-    description: "Comprehensive sales and repair solutions for all major laptop brands. From brand new and tested laptops to chip-level servicing, SSD speed upgrades, and display replacements.",
-    badge: "Sales & Repair",
+    shortDescription: "New & Certified Refurbished/2nd Hand Laptops, chip-level service & upgrades.",
+    description: "Comprehensive sales and repair solutions for all major laptop brands. Brand new & tested 2nd hand / refurbished laptops with warranty, chip-level board servicing, display replacements, and safe courier delivery across India.",
+    badge: "Sales (New & 2nd Hand) & Repair",
     category: "Computing",
     icon: "Laptop",
     image: "https://storage-asset.msi.com/event/2024/NB/msi-laptop-holiday-sales/images/kv-pd.png",
     features: [
-      "New & Refurbished Laptop Sales",
+      "Brand New & Certified 2nd Hand / Refurbished Laptops (With Warranty)",
+      "All-India Secure Courier Dispatch for Laptop Sales",
       "Chip-level Board Repair & Troubleshooting",
       "Operating System (Windows/Linux) Installation",
       "High-Speed NVMe / SATA SSD Upgrades",
@@ -50,52 +51,51 @@ export const SERVICES_DATA = [
       "Broken Screen / LED Display Replacement",
       "Keyboard, Trackpad & Hinges Repair",
       "Original Battery & Charger Replacements",
-      "Thermal Paste Repasting & Deep Cooling Cleaning",
-      "Data Recovery & Software Support"
+      "Data Recovery & Thermal Repasting"
     ],
     highlights: [
-      { label: "Supported Brands", value: "Dell, HP, Lenovo, ASUS, Acer, MSI" },
-      { label: "Turnaround Time", value: "Same-Day Quick Diagnostic & Service" },
-      { label: "Spare Quality", value: "100% Genuine Certified Components" }
+      { label: "Sales Reach", value: "All Over India Safe Courier Delivery" },
+      { label: "Supported Brands", value: "Dell, HP, Lenovo, ASUS, Acer, Apple, MSI" },
+      { label: "2nd Hand Quality", value: "Strict 30+ Point Hardware QA Tested with Warranty" }
     ],
     commonRequirements: [
+      "Looking for budget-friendly verified 2nd hand / refurbished laptop with warranty",
+      "Need brand new laptop for college, coding or office with custom config",
       "Slow performance or hanging during daily tasks",
       "Cracked display or lines showing on screen",
-      "Battery draining fast or not charging",
-      "Laptop overheating and shutting down unexpectedly",
-      "Blue screen (BSOD) or OS boot loop errors"
+      "Battery draining fast or not charging"
     ]
   },
   {
     slug: "desktop",
-    title: "Desktop Sales & Service",
-    shortDescription: "Assembly, repair, upgrades & technical support.",
-    description: "Custom desktop assembly for office, gaming, programming, and commercial usage along with hardware repair, component testing, and preventative maintenance.",
-    badge: "Custom PC & Support",
+    title: "Custom PC Building & Desktop Service",
+    shortDescription: "Custom PC builds (Gaming / Office / Editing), upgrades & All-India dispatch.",
+    description: "Expert custom desktop PC building tailored to your exact budget and performance needs. Gaming rigs, video editing workstations, coding and office setups with safe wooden-crate/thermocol All-India courier delivery, plus chip-level hardware repair.",
+    badge: "All-India Custom Builds & Service",
     category: "Computing",
     icon: "Monitor",
     image: "https://cdn.mos.cms.futurecdn.net/2eKFdkNfo4vHcWPDQuFJ86.jpg",
     features: [
-      "Custom PC Assembly for Home & Office",
-      "Gaming Rig & Workstation Builds (Intel / AMD)",
-      "Motherboard & SMPS Power Supply Repair",
-      "Processor & Graphic Card Upgrades",
-      "Storage Expansion & Hard Drive Troubleshooting",
-      "Desktop Cleaning, Cable Management & Dust Removal",
-      "Multi-Monitor Office Setup & Config",
-      "BIOS Updating & Stability Stress Testing"
+      "Custom PC Building for Gaming, Video Editing & 3D Rendering",
+      "Budget-Friendly Home, Student & Commercial Office PCs",
+      "All-India Safely Packaged PC Courier Shipping",
+      "Intel Core & AMD Ryzen Platform Specialists",
+      "Graphic Card (NVIDIA GeForce / AMD Radeon) Integration",
+      "Motherboard, SMPS Power Supply & Chip-Level Repair",
+      "Storage Expansion (Gen4 NVMe M.2 SSD + HDD)",
+      "Cable Management, Liquid Cooling & Stability Stress Testing"
     ],
     highlights: [
-      { label: "Processors", value: "Intel Core Series & AMD Ryzen Series" },
-      { label: "Custom Builds", value: "Budget, Professional & High-Performance" },
-      { label: "Diagnostic", value: "Full Hardware Component Diagnostics" }
+      { label: "PC Build Scope", value: "Custom Built for Any Budget (₹20K to ₹2L+)" },
+      { label: "Delivery Reach", value: "All Over India Safe Doorstep Delivery" },
+      { label: "Testing", value: "24-Hour Benchmark & Thermal Stress Tested" }
     ],
     commonRequirements: [
+      "Need custom gaming / editing PC built within specific budget",
+      "Need multiple office / business desktop systems dispatched across India",
       "System turns on but no display on monitor",
       "Sudden power loss or noisy SMPS fan",
-      "Need custom budget computer for accounting or CAD work",
-      "Need high storage expansion and speed boosts",
-      "Periodic corporate PC maintenance"
+      "Need processor or graphics card upgrade"
     ]
   },
   {
@@ -230,8 +230,8 @@ export const SERVICES_DATA = [
 export const TRUST_INDICATORS = [
   { icon: "CheckCircle2", title: "Trusted Service", description: "Reliable, transparent solutions" },
   { icon: "Settings", title: "Quality Support", description: "Skilled diagnostic & repairs" },
-  { icon: "Users", title: "Customer Satisfaction", description: "Serving happy local clients" },
-  { icon: "MapPin", title: "All Over Tamil Nadu", description: "Rasipuram base, statewide reach" }
+  { icon: "Users", title: "Customer Satisfaction", description: "Serving happy clients nationwide" },
+  { icon: "Truck", title: "All India Delivery", description: "Custom PC & Laptop Courier Across India" }
 ];
 
 export const WHY_CHOOSE_ITEMS = [
@@ -241,29 +241,29 @@ export const WHY_CHOOSE_ITEMS = [
     icon: "Award"
   },
   {
-    title: "Genuine Products & Parts",
-    description: "We use only authentic replacement components, certified storage drives, and verified brand peripherals.",
+    title: "All-India Safe Courier Delivery",
+    description: "Custom built gaming & office PCs, plus certified 2nd hand / brand new laptops safely packed and shipped anywhere in India.",
+    icon: "Truck"
+  },
+  {
+    title: "Verified 2nd Hand Laptops & Builds",
+    description: "Every refurbished laptop passes a 30+ point hardware stress check, battery life benchmark, and includes warranty support.",
     icon: "ShieldCheck"
   },
   {
     title: "Affordable & Transparent Pricing",
-    description: "Honest quotes with upfront diagnostics. No surprise charges or unnecessary component replacements.",
+    description: "Honest quotes with upfront diagnostics. Custom PC builds engineered for maximum performance per rupee without hidden markups.",
     icon: "Coins"
   },
   {
-    title: "Reliable After-Sales Service",
-    description: "Dedicated assistance even after your device leaves our store, ensuring your workflow remains uninterrupted.",
+    title: "Reliable After-Sales Assistance",
+    description: "Dedicated remote & phone support even after purchase, ensuring your gaming, work, or business setup runs smoothly.",
     icon: "HeartHandshake"
   },
   {
-    title: "Service Across Tamil Nadu",
-    description: "Conveniently situated in Rasipuram with prompt technical support reach extending across Tamil Nadu.",
+    title: "Tamil Nadu Walk-In & Statewide Reach",
+    description: "Conveniently situated in Rasipuram for walk-in chip-level repairs, with prompt courier and support reach extending across all districts.",
     icon: "Compass"
-  },
-  {
-    title: "Customer-Focused Support",
-    description: "We explain technical issues in simple, understandable terms so you can make informed decisions.",
-    icon: "Headphones"
   }
 ];
 

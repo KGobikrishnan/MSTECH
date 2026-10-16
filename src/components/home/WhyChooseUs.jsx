@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Award, ShieldCheck, Coins, HeartHandshake, Compass, Headphones, MapPin } from "lucide-react";
+import { Award, ShieldCheck, Coins, HeartHandshake, Compass, Headphones, MapPin, Truck } from "lucide-react";
 import { WHY_CHOOSE_ITEMS } from "../../data/siteData";
 
 const iconMap = {
@@ -9,7 +9,8 @@ const iconMap = {
   Coins: Coins,
   HeartHandshake: HeartHandshake,
   Compass: Compass,
-  Headphones: Headphones
+  Headphones: Headphones,
+  Truck: Truck
 };
 
 export default function WhyChooseUs() {

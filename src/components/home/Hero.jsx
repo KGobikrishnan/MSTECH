@@ -19,7 +19,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-[1.03fr_.97fr] gap-12 lg:gap-16 items-center">
           <div className="max-w-2xl">
             <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .45 }} className="hero-eyebrow">
-              <span className="hero-live-dot" /> RASIPURAM · NAMAKKAL · SALEM · TAMIL NADU
+              <span className="hero-live-dot" /> ALL OVER INDIA SHIPPING · WALK-IN AT RASIPURAM
             </motion.div>
 
             {/* Google Reviews & Experience Trust Anchor directly under eyebrow */}
@@ -37,17 +37,20 @@ export default function Hero() {
 
               <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#EAF6FF] border border-[#0875D1]/30 text-[#0875D1] shadow-xs">
                 <ShieldCheck size={14} className="text-[#0875D1]" />
-                <span className="text-xs font-extrabold">16+ Years Experience</span>
-                <span className="text-[#0875D1]/40">•</span>
-                <span className="text-[11px] font-semibold text-[#042B55]">Est. 2024</span>
+                <span className="text-xs font-extrabold">16+ Years Tech Experience</span>
+              </div>
+
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 shadow-xs">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="text-xs font-extrabold">All India PC & Laptop Delivery</span>
               </div>
             </motion.div>
 
             <motion.h1 initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .55, delay: .08 }} className="mt-4 text-[2.6rem] sm:text-5xl lg:text-[3.9rem] leading-[1.08] tracking-[-.045em] font-extrabold text-[#10263F]">
-              Expert Laptop Service & <span className="hero-title-accent">Premium Sales in Rasipuram.</span>
+              Custom PC Builds, <span className="hero-title-accent">2nd Hand Laptops</span> & Chip-Level Service.
             </motion.h1>
             <motion.p initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .5, delay: .16 }} className="mt-5 text-base sm:text-lg leading-relaxed text-slate-600 max-w-xl">
-              Fast, reliable repairs for all brands. Upgrade your setup with our range of new and refurbished laptops. Authorized service & 100% genuine parts.
+              Specialized custom gaming & office PC building, quality-tested brand new & 2nd hand / refurbished laptops with warranty — shipped securely all over India. Expert chip-level repairs at our Rasipuram lab.
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .5, delay: .23 }} className="mt-8 flex flex-wrap gap-3">
               <a 
@@ -56,20 +59,20 @@ export default function Hero() {
                 rel="noopener noreferrer" 
                 className="hero-primary-cta !bg-[#16A34A] hover:!bg-[#15803D] text-white shadow-lg shadow-emerald-600/20"
               >
-                <MessageCircle size={18} className="fill-current" /> Book a Repair <ArrowRight size={17} />
+                <MessageCircle size={18} className="fill-current" /> Order PC / Laptop on WhatsApp <ArrowRight size={17} />
               </a>
               <a href="#service-estimator" className="hero-secondary-cta !border-[#0875D1]/30 hover:!border-[#0875D1] text-[#0875D1]">
-                <span>Check Cost & Turnaround</span>
+                <span>Get Instant Quote</span>
               </a>
-              <Link to="/services/laptop" className="hero-secondary-cta">
-                <Laptop size={17} className="text-[#1674C8]" /> View Laptops
+              <Link to="/services/desktop" className="hero-secondary-cta">
+                <Monitor size={17} className="text-[#1674C8]" /> Custom PC Builds
               </Link>
-              <a href={`tel:${BUSINESS_INFO.phone}`} className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl border border-slate-200 text-slate-700 font-bold text-sm hover:bg-slate-50 transition-colors">
-                <Phone size={16} className="text-[#1674C8]" /> {BUSINESS_INFO.phoneDisplay}
-              </a>
+              <Link to="/services/laptop" className="hero-secondary-cta">
+                <Laptop size={17} className="text-[#1674C8]" /> 2nd Hand / New Laptops
+              </Link>
             </motion.div>
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: .38 }} className="mt-8 flex flex-wrap gap-x-5 gap-y-2.5 text-xs sm:text-sm font-semibold text-slate-600">
-              {["Authorized Service", "100% Genuine Parts", "Quick Turnaround", "Free Diagnostic"].map((item) => (
+              {["All India Courier Shipping", "Verified 2nd Hand with Warranty", "Custom Budget Builds (₹20k - ₹2L+)", "16+ Yrs Chip-Level Lab"].map((item) => (
                 <span key={item} className="inline-flex items-center gap-1.5">
                   <Check size={15} className="text-emerald-600 shrink-0" />
                   {item}
@@ -85,7 +88,7 @@ export default function Hero() {
             <div className="hero-showcase-top"><div><span className="hero-showcase-kicker">MS TECH · YOUR LOCAL TECH PARTNER</span><h2>One team for all your tech.</h2></div><span className="hero-shield"><ShieldCheck size={19} /></span></div>
             <div className="hero-device-art" aria-hidden="true"><div className="hero-art-glow"/><div className="hero-screen"><div className="hero-screen-bar"><i/><i/><i/></div><div className="hero-screen-content"><span>MS</span><b>TECH</b><small>SALES · SERVICE · SUPPORT</small></div></div><div className="hero-phone"><div/><span>●</span><i/></div><div className="hero-device-base"/><div className="hero-art-orbit orbit-a"/><div className="hero-art-orbit orbit-b"/><div className="hero-art-chip">24/7<br/><b>CARE</b></div></div>
             <div className="hero-category-grid">{categories.map(({ Icon, label, detail }, i) => <Link key={label} to={i === 0 ? "/services/laptop" : "/services"} className="hero-category"><span className="hero-category-icon"><Icon size={19}/></span><span><b>{label}</b><small>{detail}</small></span><ArrowRight size={15} className="hero-category-arrow" /></Link>)}</div>
-            <div className="hero-showcase-footer"><span className="hero-footer-pulse"/> Serving Rasipuram & across Tamil Nadu <Link to="/services">Explore services <ArrowRight size={14}/></Link></div>
+            <div className="hero-showcase-footer"><span className="hero-footer-pulse"/> Shipping across All India • Walk-in store at Rasipuram <Link to="/services">Explore services <ArrowRight size={14}/></Link></div>
           </motion.div>
         </div>
       </div>

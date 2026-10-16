@@ -11,6 +11,7 @@ import ReviewsPreview from "../components/home/ReviewsPreview";
 import FAQSection from "../components/home/FAQSection";
 import CTASection from "../components/home/CTASection";
 import GoogleMapEmbed from "../components/common/GoogleMapEmbed";
+import NationwideSalesBanner from "../components/home/NationwideSalesBanner";
 
 export default function Home() {
   return (
@@ -94,7 +95,8 @@ export default function Home() {
                   { "@type": "AdministrativeArea", "name": "Namakkal" },
                   { "@type": "AdministrativeArea", "name": "Salem" },
                   { "@type": "AdministrativeArea", "name": "Erode" },
-                  { "@type": "State", "name": "Tamil Nadu" }
+                  { "@type": "State", "name": "Tamil Nadu" },
+                  { "@type": "Country", "name": "India" }
                 ],
                 "hasOfferCatalog": {
                   "@type": "OfferCatalog",
@@ -231,6 +233,9 @@ export default function Home() {
             <ServiceEstimator />
           </div>
         </section>
+
+        {/* All-India PC Building & 2nd Hand / Refurbished Laptop Nationwide Banner */}
+        <NationwideSalesBanner />
 
         {/* Core Services Catalog */}
         <ServicesPreview />

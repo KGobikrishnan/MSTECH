@@ -4,50 +4,48 @@ import { BUSINESS_INFO } from "../../data/siteData";
 
 const SERVICE_OPTIONS = [
   {
-    id: "laptop",
-    label: "Laptop Repair",
+    id: "pc_build",
+    label: "Custom PC Building",
+    issues: [
+      { id: "gaming_pc", label: "Gaming PC Build (RTX / RX Series)", eta: "1-2 Days", note: "Optimized FPS, liquid cooling & All-India safe wooden-crate shipping" },
+      { id: "budget_pc", label: "Budget Student / Home PC (₹20K - ₹35K)", eta: "1 Day", note: "High-speed SSD, quad-core processor & full warranty" },
+      { id: "editing_pc", label: "Video Editing & 3D Workstation", eta: "1-2 Days", note: "Ryzen 7/9 / Intel i7/i9, 32GB+ RAM & fast rendering" },
+      { id: "office_bulk", label: "Office / Commercial Bulk Systems", eta: "2-3 Days", note: "Multi-system bulk pricing for shops, studios & offices" }
+    ]
+  },
+  {
+    id: "laptop_sales",
+    label: "Laptop Sales (New & 2nd Hand)",
+    issues: [
+      { id: "refurb_budget", label: "2nd Hand / Refurbished Laptop (₹15K - ₹30K)", eta: "Ready Stock", note: "30+ Point QA tested, battery health verified with warranty & courier dispatch" },
+      { id: "refurb_thinkpad", label: "Enterprise Refurbished (ThinkPad / Latitude / EliteBook)", eta: "Ready Stock", note: "Military-grade durability, Core i5/i7, NVMe SSD & warranty" },
+      { id: "new_branded", label: "Brand New Laptop (Dell / HP / Lenovo / ASUS / Acer)", eta: "Same Day", note: "Factory sealed with official manufacturer warranty & free setup" },
+      { id: "macbook_sales", label: "Pre-Owned MacBook / Pro / Air", eta: "Ready Stock", note: "Original Apple hardware tested with genuine charger" }
+    ]
+  },
+  {
+    id: "laptop_repair",
+    label: "Laptop Service & Repair",
     issues: [
       { id: "display", label: "Broken Display / Screen Lines", eta: "2-4 Hours", note: "Genuine OEM Screen Replacement" },
       { id: "ssd", label: "System Very Slow / SSD Upgrade", eta: "1-2 Hours", note: "Supercharge boot & app speed with NVMe SSD" },
       { id: "battery", label: "Battery Draining / Dead", eta: "Same Day", note: "Original brand battery with warranty" },
-      { id: "os", label: "OS Crash / Boot Loop / Virus", eta: "1-2 Hours", note: "Clean OS installation with data backup" },
       { id: "chip", label: "No Power / Motherboard Issue", eta: "24-48 Hours", note: "Chip-level circuit diagnostics & repair" }
     ]
   },
   {
-    id: "desktop",
-    label: "Custom PC & Desktop",
+    id: "cctv_printer",
+    label: "CCTV & Printer Service",
     issues: [
-      { id: "custom_build", label: "New Custom PC (Office / Gaming)", eta: "1-2 Days", note: "Custom assembly tailored to your budget" },
-      { id: "no_display", label: "PC Turns On but No Display", eta: "Same Day", note: "RAM/GPU/Motherboard test & fix" },
-      { id: "smps", label: "Power Supply (SMPS) Failure", eta: "Same Day", note: "Certified power supply replacement" },
-      { id: "tuneup", label: "Deep Cleaning & Thermal Repasting", eta: "2 Hours", note: "Improves cooling and stops sudden shutdown" }
-    ]
-  },
-  {
-    id: "printer",
-    label: "Laser & Inkjet Printer",
-    issues: [
-      { id: "toner", label: "Toner Refill / Cartridge Issue", eta: "30-45 Mins", note: "High yield black & color toner refill" },
-      { id: "jam", label: "Paper Jam & Roller Sound", eta: "Same Day", note: "Mechanism inspection & roller replacement" },
-      { id: "head", label: "Faded Print / Streaks / Lines", eta: "Same Day", note: "Printhead ultrasonic cleaning & alignment" },
-      { id: "wifi", label: "Office Network / Wi-Fi Setup", eta: "Same Day", note: "Connect all computers to single printer" }
-    ]
-  },
-  {
-    id: "cctv",
-    label: "CCTV Surveillance",
-    issues: [
-      { id: "home_4ch", label: "Home 4-Channel HD/IP Setup", eta: "1-2 Days", note: "Day/Night audio cameras + DVR + Mobile Live" },
-      { id: "shop_8ch", label: "Shop / Commercial 8-Channel Setup", eta: "2-3 Days", note: "High resolution wide-angle surveillance" },
-      { id: "mobile_sync", label: "Mobile Live Streaming Fix", eta: "Same Day", note: "View cameras remotely anywhere on 4G/5G" },
-      { id: "hdd_record", label: "Recording Stopped / Hard Disk Issue", eta: "Same Day", note: "Surveillance hard drive check & replacement" }
+      { id: "home_4ch", label: "Home / Shop 4-CH HD CCTV Setup", eta: "1-2 Days", note: "Day/Night audio cameras + DVR + Mobile Live Streaming" },
+      { id: "commercial_cctv", label: "Commercial 8/16-CH IP Surveillance", eta: "2-3 Days", note: "High-res wide angle cameras with remote monitoring" },
+      { id: "toner_repair", label: "Printer Toner Refill & Repair", eta: "Same Day", note: "Laser cartridge refill, printhead cleaning & paper jam fix" }
     ]
   }
 ];
 
 export default function ServiceEstimator() {
-  const [activeCategory, setActiveCategory] = useState("laptop");
+  const [activeCategory, setActiveCategory] = useState("pc_build");
   const [selectedIssue, setSelectedIssue] = useState(SERVICE_OPTIONS[0].issues[0].id);
   const [customerName, setCustomerName] = useState("");
   const [customerTown, setCustomerTown] = useState("");
@@ -62,13 +60,12 @@ export default function ServiceEstimator() {
   };
 
   const generateWhatsAppUrl = () => {
-    const text = `Hi MS TECH, I need a quick estimate / service booking:
-- Service: ${currentCategoryObj.label}
-- Issue/Requirement: ${currentIssueObj.label}
+    const text = `Hi MS TECH, I am interested in:
+- Requirement: ${currentCategoryObj.label} (${currentIssueObj.label})
 ${customerName ? `- Name: ${customerName}` : ""}
-${customerTown ? `- Location: ${customerTown}` : "- Location: Tamil Nadu"}
+${customerTown ? `- Delivery Location: ${customerTown}` : "- Location: India"}
 
-Please share the estimated cost and availability.`;
+Please share the pricing quote, specs & delivery details.`;
 
     return `https://wa.me/91${BUSINESS_INFO.phone}?text=${encodeURIComponent(text)}`;
   };
@@ -83,13 +80,13 @@ Please share the estimated cost and availability.`;
         <div>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EAF6FF] border border-[#0875D1]/20 text-[#0875D1] text-xs font-bold uppercase tracking-wider mb-2">
             <Calculator className="w-3.5 h-3.5" />
-            Quick Service Estimator
+            PC Build & Laptop Quotation Estimator
           </div>
           <h3 className="text-xl sm:text-2xl font-black text-[#042B55]">
-            Check Service Time & Get Instant Quote
+            Custom PC, 2nd Hand Laptop & Service Cost Calculator
           </h3>
           <p className="text-xs sm:text-sm text-slate-500 mt-1">
-            Choose your device and issue to see turnaround time and get direct WhatsApp pricing from our Rasipuram lab.
+            Select your need to get instant specs, turnaround time, and direct WhatsApp quote with All-India delivery options.
           </p>
         </div>
 
@@ -170,7 +167,7 @@ Please share the estimated cost and availability.`;
           </label>
           <input
             type="text"
-            placeholder="e.g. Rasipuram / Salem / Namakkal"
+            placeholder="e.g. Rasipuram / Chennai / Bangalore / Delhi / Mumbai"
             value={customerTown}
             onChange={(e) => setCustomerTown(e.target.value)}
             className="w-full px-3.5 py-2 rounded-xl bg-white border border-slate-200 text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#0875D1]"
@@ -183,7 +180,7 @@ Please share the estimated cost and availability.`;
         <div>
           <div className="flex items-center gap-2">
             <span className="text-[11px] uppercase tracking-wider font-bold text-[#7DD3FC]">
-              Selected Service
+              Selected Item / Scope
             </span>
             <span className="text-white/40">•</span>
             <span className="text-[11px] font-semibold text-emerald-300 flex items-center gap-1">
@@ -194,7 +191,7 @@ Please share the estimated cost and availability.`;
             {currentCategoryObj.label} — {currentIssueObj.label}
           </h4>
           <p className="text-xs text-slate-200 mt-0.5">
-            Get exact spare price, diagnostic steps & book your slot directly with MS TECH Rasipuram.
+            Safe wooden crate shipping across India & verified warranty. Get direct quotation on WhatsApp.
           </p>
         </div>
 
