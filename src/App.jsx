@@ -4,6 +4,7 @@ import TopBar from "./components/layout/TopBar";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import MobileActionBar from "./components/layout/MobileActionBar";
+import MobileLeadPill from "./components/layout/MobileLeadPill";
 import FloatingActions from "./components/layout/FloatingActions";
 import SmoothScrollProvider from "./components/common/SmoothScrollProvider";
 
@@ -42,6 +43,9 @@ export default function App() {
 
       {/* Global Footer */}
       <Footer />
+
+      {/* Mobile Sticky Notification Pill (PC Builds & 2nd Hand Stock) */}
+      <MobileLeadPill />
 
       {/* Mobile Sticky Bottom CTA Bar */}
       <MobileActionBar />
