@@ -29,7 +29,7 @@ export default function Contact() {
               "@type": "LocalBusiness",
               "name": "MS TECH",
               "telephone": "+919843777146",
-              "email": "mstechservices.in@gmail.com",
+              "email": "support@mstechservices.in",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "No.5 Balasubramaniyan Theater Road, Opp. Kannan Department Store, New Bus Stand",

@@ -58,7 +58,7 @@ export default function Home() {
                 ],
                 "description": "MS TECH is Rasipuram's top-rated computer, laptop, printer sales and chip-level service center with 16+ years of field experience. Authorized replacement spares, free preliminary diagnostics, custom PC builds, and statewide Tamil Nadu CCTV support.",
                 "telephone": "+919843777146",
-                "email": "mstechservices.in@gmail.com",
+                "email": "support@mstechservices.in",
                 "priceRange": "₹₹",
                 "currenciesAccepted": "INR",
                 "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Net Banking",

@@ -5,7 +5,7 @@ export const BUSINESS_INFO = {
   coverage: "Rasipuram • Tamil Nadu • All Over India Delivery",
   phone: "9843777146",
   phoneDisplay: "+91 9843777146",
-  email: "mstechservices.in@gmail.com",
+  email: "support@mstechservices.in",
   whatsapp: "9843777146",
   whatsappUrl: "https://wa.me/919843777146?text=Hi%20MS%20TECH%2C%20I%20would%20like%20to%20enquire%20about%20your%20services.",
   address: {
