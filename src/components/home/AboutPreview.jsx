@@ -91,7 +91,7 @@ export default function AboutPreview() {
               </div>
               <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
                 <CheckCircle2 className="w-5 h-5 text-[#0875D1] shrink-0" />
-                <span>New & 2nd Hand Laptops with Warranty</span>
+                <span>Brand New Laptops with Official Warranty</span>
               </div>
               <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
                 <CheckCircle2 className="w-5 h-5 text-[#0875D1] shrink-0" />

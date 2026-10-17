@@ -44,7 +44,7 @@ export default function App() {
       {/* Global Footer */}
       <Footer />
 
-      {/* Mobile Sticky Notification Pill (PC Builds & 2nd Hand Stock) */}
+      {/* Mobile Sticky Notification Pill (PC Builds & Laptop Sales) */}
       <MobileLeadPill />
 
       {/* Mobile Sticky Bottom CTA Bar */}

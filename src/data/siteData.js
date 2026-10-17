@@ -35,35 +35,35 @@ export const SERVICES_DATA = [
   {
     slug: "laptop",
     title: "Laptop Sales & Service",
-    shortDescription: "New & Certified Refurbished/2nd Hand Laptops, chip-level service & upgrades.",
-    description: "Comprehensive sales and repair solutions for all major laptop brands. Brand new & tested 2nd hand / refurbished laptops with warranty, chip-level board servicing, display replacements, and safe courier delivery across India.",
-    badge: "Sales (New & 2nd Hand) & Repair",
+    shortDescription: "Brand New Laptops, chip-level motherboard service & performance upgrades.",
+    description: "Comprehensive sales and repair solutions for all major laptop brands. Brand new factory-sealed laptops with manufacturer warranty, chip-level board servicing, display replacements, and safe courier delivery across India.",
+    badge: "Brand New Sales & Repair",
     category: "Computing",
     icon: "Laptop",
     image: "https://storage-asset.msi.com/event/2024/NB/msi-laptop-holiday-sales/images/kv-pd.png",
     features: [
-      "Brand New & Certified 2nd Hand / Refurbished Laptops (With Warranty)",
-      "All-India Secure Courier Dispatch for Laptop Sales",
+      "Brand New Branded Laptop Sales (Dell, HP, Lenovo, ASUS, Acer)",
+      "Official Manufacturer Warranty & Complete Setup",
+      "All-India Secure Courier Dispatch for New Laptop Sales",
       "Chip-level Board Repair & Troubleshooting",
       "Operating System (Windows/Linux) Installation",
       "High-Speed NVMe / SATA SSD Upgrades",
       "RAM Memory Expansion & Dual-Channel Setup",
       "Broken Screen / LED Display Replacement",
       "Keyboard, Trackpad & Hinges Repair",
-      "Original Battery & Charger Replacements",
-      "Data Recovery & Thermal Repasting"
+      "Original Battery & Charger Replacements"
     ],
     highlights: [
       { label: "Sales Reach", value: "All Over India Safe Courier Delivery" },
       { label: "Supported Brands", value: "Dell, HP, Lenovo, ASUS, Acer, Apple, MSI" },
-      { label: "2nd Hand Quality", value: "Strict 30+ Point Hardware QA Tested with Warranty" }
+      { label: "Quality Standard", value: "100% Genuine Certified Spares & Factory Sealed Units" }
     ],
     commonRequirements: [
-      "Looking for budget-friendly verified 2nd hand / refurbished laptop with warranty",
       "Need brand new laptop for college, coding or office with custom config",
       "Slow performance or hanging during daily tasks",
       "Cracked display or lines showing on screen",
-      "Battery draining fast or not charging"
+      "Battery draining fast or not charging",
+      "Chip-level motherboard issue or dead laptop fix"
     ]
   },
   {
@@ -242,12 +242,12 @@ export const WHY_CHOOSE_ITEMS = [
   },
   {
     title: "All-India Safe Courier Delivery",
-    description: "Custom built gaming & office PCs, plus certified 2nd hand / brand new laptops safely packed and shipped anywhere in India.",
+    description: "Custom built gaming & office PCs, plus brand new laptops safely packed and shipped anywhere in India.",
     icon: "Truck"
   },
   {
-    title: "Verified 2nd Hand Laptops & Builds",
-    description: "Every refurbished laptop passes a 30+ point hardware stress check, battery life benchmark, and includes warranty support.",
+    title: "Genuine Products & Factory Warranty",
+    description: "Every new laptop and component comes with authentic manufacturer warranty, OEM spares, and verified hardware testing.",
     icon: "ShieldCheck"
   },
   {

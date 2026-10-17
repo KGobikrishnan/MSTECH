@@ -15,12 +15,12 @@ const SERVICE_OPTIONS = [
   },
   {
     id: "laptop_sales",
-    label: "Laptop Sales (New & 2nd Hand)",
+    label: "Brand New Laptop Sales",
     issues: [
-      { id: "refurb_budget", label: "2nd Hand / Refurbished Laptop (₹15K - ₹30K)", eta: "Ready Stock", note: "30+ Point QA tested, battery health verified with warranty & courier dispatch" },
-      { id: "refurb_thinkpad", label: "Enterprise Refurbished (ThinkPad / Latitude / EliteBook)", eta: "Ready Stock", note: "Military-grade durability, Core i5/i7, NVMe SSD & warranty" },
-      { id: "new_branded", label: "Brand New Laptop (Dell / HP / Lenovo / ASUS / Acer)", eta: "Same Day", note: "Factory sealed with official manufacturer warranty & free setup" },
-      { id: "macbook_sales", label: "Pre-Owned MacBook / Pro / Air", eta: "Ready Stock", note: "Original Apple hardware tested with genuine charger" }
+      { id: "student_laptop", label: "Student & Budget New Laptop (Dell / HP / Acer)", eta: "Ready Stock", note: "Factory-sealed with official brand warranty & free essential software setup" },
+      { id: "office_laptop", label: "Business & Professional Ultrabook (Core i5 / Ryzen 5)", eta: "Ready Stock", note: "Lightweight, long battery life, backlit keyboard & fast NVMe SSD" },
+      { id: "gaming_laptop", label: "Gaming Laptop (RTX Dedicated Graphics)", eta: "1-2 Days", note: "High refresh rate display, cooling system & maximum gaming performance" },
+      { id: "custom_ram_ssd", label: "New Laptop with Pre-Upgraded RAM & SSD", eta: "Same Day", note: "Customized configuration without voiding official brand warranty" }
     ]
   },
   {
@@ -83,7 +83,7 @@ Please share the pricing quote, specs & delivery details.`;
             PC Build & Laptop Quotation Estimator
           </div>
           <h3 className="text-xl sm:text-2xl font-black text-[#042B55]">
-            Custom PC, 2nd Hand Laptop & Service Cost Calculator
+            Custom PC, New Laptop & Service Cost Calculator
           </h3>
           <p className="text-xs sm:text-sm text-slate-500 mt-1">
             Select your need to get instant specs, turnaround time, and direct WhatsApp quote with All-India delivery options.

@@ -16,11 +16,11 @@ export default function MobileLeadPill() {
       queryText: "Hi MS TECH, I am looking for a Custom PC build. Please share specs and price quotation."
     },
     {
-      badge: "2nd Hand Stock",
+      badge: "Laptop Sales",
       icon: Laptop,
-      title: "Certified 2nd Hand Laptops Available",
-      subtitle: "Starting ₹14,999 • 30+ QA tested with warranty",
-      queryText: "Hi MS TECH, I am looking to buy a verified 2nd hand / refurbished laptop. Please share today's ready stock and prices."
+      title: "Brand New Laptops & Chip-Level Care",
+      subtitle: "Official warranty • Same-day fast diagnosis",
+      queryText: "Hi MS TECH, I am looking to buy a new laptop / need laptop service. Please share details and pricing."
     }
   ];
 
@@ -43,7 +43,7 @@ export default function MobileLeadPill() {
     };
   }, [isDismissed]);
 
-  // Alternate message every 4 seconds to show both PC build and Refurbished Laptops
+  // Alternate message every 4 seconds to show both PC build and Laptop sales
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveMessageIndex((prev) => (prev + 1) % messages.length);

@@ -141,7 +141,7 @@ export default function Home() {
                       "@type": "Offer",
                       "itemOffered": {
                         "@type": "Service",
-                        "name": "New & Refurbished Branded Laptop Sales with Warranty"
+                        "name": "Brand New Laptop Sales with Official Warranty"
                       }
                     }
                   ]
@@ -183,10 +183,10 @@ export default function Home() {
                   },
                   {
                     "@type": "Question",
-                    "name": "Where can I buy brand new and refurbished laptops in Rasipuram?",
+                    "name": "Where can I buy brand new laptops with official warranty in Rasipuram?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "MS TECH offers brand new and certified refurbished laptops from Dell, HP, Lenovo, ASUS, and Acer with official manufacturer warranty, genuine operating system configurations, and free accessory bundles."
+                      "text": "MS TECH offers brand new factory-sealed laptops from Dell, HP, Lenovo, ASUS, and Acer with official manufacturer warranty, genuine operating system configurations, and free accessory bundles."
                     }
                   },
                   {
@@ -234,7 +234,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* All-India PC Building & 2nd Hand / Refurbished Laptop Nationwide Banner */}
+        {/* All-India Custom PC Building & New Laptop Sales Banner */}
         <NationwideSalesBanner />
 
         {/* Core Services Catalog */}

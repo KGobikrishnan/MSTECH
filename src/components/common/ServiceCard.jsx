@@ -29,7 +29,7 @@ export default function ServiceCard({ service, index = 0 }) {
     service.slug === "desktop"
       ? `Hi MS TECH, I am interested in a Custom PC Build (Gaming / Office / Editing). Please share configuration options, quotation and All-India delivery details.`
       : service.slug === "laptop"
-      ? `Hi MS TECH, I am interested in buying a Laptop (New / Verified 2nd Hand Refurbished) / Service. Please share current available models, pricing and warranty details.`
+      ? `Hi MS TECH, I am interested in buying a Brand New Laptop / Service. Please share current available models, pricing and warranty details.`
       : `Hi MS TECH, I would like to enquire about ${service.title}.`
   );
   const serviceWhatsAppUrl = `https://wa.me/91${BUSINESS_INFO.phone}?text=${whatsappMessage}`;

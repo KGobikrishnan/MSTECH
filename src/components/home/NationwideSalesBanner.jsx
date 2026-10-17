@@ -9,8 +9,8 @@ export default function NationwideSalesBanner() {
     "Hi MS TECH, I am looking for a Custom PC build. My budget is around ₹______ and my usage is (Gaming / Video Editing / Office). Please share specs and price."
   );
 
-  const refurbishedLaptopWhatsAppText = encodeURIComponent(
-    "Hi MS TECH, I am looking to buy a 2nd Hand / Refurbished Laptop with warranty. Please share the available models, configurations and prices."
+  const brandNewLaptopWhatsAppText = encodeURIComponent(
+    "Hi MS TECH, I am looking to buy a Brand New Laptop with official brand warranty. Please share the available models, configurations and prices."
   );
 
   return (
@@ -40,7 +40,7 @@ export default function NationwideSalesBanner() {
             transition={{ delay: 0.1 }}
             className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight"
           >
-            All-India <span className="text-[#38BDF8]">PC Building</span> & Verified <span className="text-emerald-400">2nd Hand Laptops</span>
+            All-India <span className="text-[#38BDF8]">Custom PC Building</span> & <span className="text-emerald-400">Brand New Laptops</span>
           </motion.h2>
 
           <motion.p
@@ -50,7 +50,7 @@ export default function NationwideSalesBanner() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-base sm:text-lg text-slate-200"
           >
-            You don’t have to be in Rasipuram to get MS TECH excellence. We build custom dream gaming & office PCs and supply certified pre-owned laptops with warranty — safely packaged and shipped to your doorstep anywhere in India.
+            You don’t have to be in Rasipuram to get MS TECH excellence. We build custom dream gaming & office PCs and supply brand new laptops with official warranty — safely packaged and shipped to your doorstep anywhere in India.
           </motion.p>
         </div>
 
@@ -117,7 +117,7 @@ export default function NationwideSalesBanner() {
             </div>
           </motion.div>
 
-          {/* Card 2: 2nd Hand / Refurbished & Brand New Laptops */}
+          {/* Card 2: Brand New Laptops & Chip-Level Support */}
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -131,22 +131,22 @@ export default function NationwideSalesBanner() {
                   <Laptop className="w-7 h-7" />
                 </div>
                 <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-[#0875D1]/30 text-[#7DD3FC] border border-[#0875D1]/40">
-                  30+ Point Hardware QA Check
+                  100% Genuine Brand Warranty
                 </span>
               </div>
 
               <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-3">
-                Certified 2nd Hand & New Laptops
+                Brand New Laptops & Chip-Level Support
               </h3>
               <p className="text-sm text-slate-300 leading-relaxed mb-6">
-                Get premium enterprise-grade laptops at half the retail price. Ideal for students, working professionals, and business owners. Includes replacement warranty and testing reports.
+                Get brand new sealed laptops from top manufacturers with official warranty, custom RAM/SSD configurations, and full software setup. Shipped safely across India with complete technical assistance.
               </p>
 
               <div className="space-y-3 mb-8">
                 {[
-                  "Verified ThinkPad, Dell Latitude & HP EliteBook Laptops",
-                  "Brand New Factory-Sealed Laptops with Official Brand Warranty",
-                  "100% Tested Battery Health, Keyboard, Trackpad & Crystal Clear Display",
+                  "Factory-Sealed Laptops from Dell, HP, Lenovo, ASUS & Acer",
+                  "Official Manufacturer Warranty & Complete After-Sales Support",
+                  "Pre-Configured with Genuine Windows OS & Office Tools",
                   "Express Tracked Courier Delivery Across Every State in India"
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-200">
@@ -159,13 +159,13 @@ export default function NationwideSalesBanner() {
 
             <div className="pt-6 border-t border-white/10 flex flex-wrap items-center gap-3">
               <a
-                href={`https://wa.me/91${BUSINESS_INFO.phone}?text=${refurbishedLaptopWhatsAppText}`}
+                href={`https://wa.me/91${BUSINESS_INFO.phone}?text=${brandNewLaptopWhatsAppText}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#0875D1] hover:bg-[#0284C7] text-white font-bold text-xs sm:text-sm transition-all shadow-lg shadow-[#0875D1]/30 hover:scale-105 active:scale-95"
               >
                 <MessageCircle className="w-4 h-4 fill-current" />
-                <span>Enquire Available Laptops & Stock</span>
+                <span>Enquire New Laptops & Pricing</span>
               </a>
               <Link
                 to="/services/laptop"
@@ -188,7 +188,7 @@ export default function NationwideSalesBanner() {
             <div>
               <h4 className="text-sm font-bold text-white">Share Your Budget or Specs</h4>
               <p className="text-xs text-slate-300 mt-1">
-                WhatsApp us your requirement — budget PC, gaming rig, or 2nd hand laptop configuration.
+                WhatsApp us your requirement — budget PC, gaming rig, or new laptop configuration.
               </p>
             </div>
           </div>
