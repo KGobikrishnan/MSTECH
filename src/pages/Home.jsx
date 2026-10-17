@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import Hero from "../components/home/Hero";
+import HomePromoBanner from "../components/home/HomePromoBanner";
 import ProcessSteps from "../components/home/ProcessSteps";
 import ServiceEstimator from "../components/home/ServiceEstimator";
 import ServicesPreview from "../components/home/ServicesPreview";
@@ -221,8 +222,18 @@ export default function Home() {
       </Helmet>
 
       <main className="bg-[#F8FAFC]">
+        {/* Mobile View ONLY: Banner placed ABOVE the Hero Section */}
+        <div className="lg:hidden">
+          <HomePromoBanner />
+        </div>
+
         {/* Sleek Bento Grid Hero */}
         <Hero />
+
+        {/* Desktop View ONLY: Banner placed BELOW Hero & ABOVE Process Steps */}
+        <div className="hidden lg:block">
+          <HomePromoBanner />
+        </div>
 
         {/* 4-Step Transparent Repair Process */}
         <ProcessSteps />
